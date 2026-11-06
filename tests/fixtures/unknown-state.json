@@ -1,0 +1,53 @@
+[
+  {
+    "id": "topo-phantom-4",
+    "brand": "Topo Athletic",
+    "model": "Phantom 4",
+    "product_url": "https://www.topoathletic.com/mens-phantom-4",
+    "checked": "2026-11-06",
+    "fields": {
+      "intended_use": {
+        "value": "Daily Running, Walking",
+        "unit": "",
+        "state": "Published",
+        "source_url": "https://www.topoathletic.com/mens-phantom-4",
+        "quote": "Daily Running, Walking",
+        "checked": "2026-11-06"
+      },
+      "drop": {
+        "value": 5,
+        "unit": "mm",
+        "state": "Published",
+        "source_url": "https://www.topoathletic.com/mens-phantom-4",
+        "quote": "5 mm",
+        "checked": "2026-11-06"
+      },
+      "weight": {
+        "value": 9.3,
+        "unit": "oz",
+        "state": "Invalid test state",
+        "source_url": "https://www.topoathletic.com/mens-phantom-4",
+        "quote": "9.3 OZ (M9)",
+        "checked": "2026-11-06",
+        "note": "Men's US 9."
+      },
+      "stack": {
+        "value": "35 mm (heel) x 30 mm (forefoot)",
+        "unit": "",
+        "state": "Published",
+        "source_url": "https://www.topoathletic.com/mens-phantom-4",
+        "quote": "35 mm (heel) x 30 mm (forefoot)",
+        "checked": "2026-11-06"
+      },
+      "price": {
+        "value": 150,
+        "unit": "USD",
+        "state": "Published",
+        "source_url": "https://www.topoathletic.com/mens-phantom-4",
+        "quote": "$150.00",
+        "checked": "2026-11-06",
+        "price_kind": "manufacturer"
+      }
+    }
+  }
+]

@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A small, evidence-first product finder. Compare published specifications and inspect their sources.">
+  <title>Product Fit Kit</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="core.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#results">Skip to results</a>
+  <header class="masthead"><a class="wordmark" href="./" aria-label="Product Fit Kit home"><span class="mark" aria-hidden="true">↗</span> Product Fit Kit</a><span class="edition">A SMALLER, BETTER SHORTLIST</span></header>
+  <main>
+    <section class="intro" aria-labelledby="heading">
+      <p class="eyebrow">PUBLISHED SPECS. VISIBLE SOURCES.</p>
+      <h1 id="heading">Find your fit.</h1>
+      <p id="question" class="question">Loading your category…</p>
+      <p id="notice" class="notice" hidden></p>
+      <p id="category-notes" class="category-notes" hidden></p>
+    </section>
+    <details id="explainer" class="explainer" hidden><summary id="explainer-title"></summary><p id="explainer-text"></p></details>
+    <div class="workspace" id="workspace" hidden>
+      <aside aria-label="Product filters"><div class="filter-heading"><h2>Make it yours</h2><button id="reset" class="text-button" type="button">Reset all</button></div><div id="filters"></div><p class="filter-note">Choose any combination. Only comparable, verified values match an active filter.</p></aside>
+      <section id="results" aria-labelledby="result-count" tabindex="-1">
+        <div class="results-bar"><h2 id="result-count" aria-live="polite"></h2><label class="sort">Sort by <select id="sort"><option value="model">Brand &amp; model</option></select></label></div>
+        <div id="cards" class="cards"></div>
+        <div id="empty" class="empty" hidden><span aria-hidden="true">↗</span><h3 id="empty-title"></h3><p id="empty-text"></p></div>
+      </section>
+    </div>
+    <p id="error" class="error" role="alert" hidden></p>
+    <noscript><p>This product finder needs JavaScript to load the category and apply filters.</p></noscript>
+  </main>
+  <footer>Built with Product Fit Kit. Provided as-is. Specs come from manufacturer pages; check them before you rely on them.</footer>
+</body>
+</html>
