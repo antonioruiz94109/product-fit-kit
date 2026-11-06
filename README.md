@@ -39,7 +39,7 @@ Read [the method](docs/method.md), [data rules](docs/data-rules.md) and [prompt 
 
 ## Included examples
 
-- **Shoes:** ten men’s models across seven brands; active by default. **Sample data copied from Stack & Drop on 2026-11-06. Not kept up to date.** Values were checked against current manufacturer pages; the [change report](CHANGE_REPORT.md) lists differences and unresolved evidence. Intended use retains exact manufacturer wording. No verified dealer offer was found; that requested example is documented as missing.
+- **Shoes:** ten men’s models across six brands; active by default. **Sample data copied from Stack & Drop on 2026-11-06. Not kept up to date.** Values were checked against current manufacturer pages; the [change report](CHANGE_REPORT.md) lists differences and unresolved evidence. Intended-use filters use the editorial groups Road daily / Road fast / Trail; cards retain exact manufacturer wording and labeled quotes. Below 768 px, open Filters (n) and choose Show X to return to results. No verified dealer offer was found; that requested example is documented as missing.
 - **Luggage:** config plus empty data array; demonstrates the friendly empty state and a dimension-based benchmark, not a promise of airline acceptance.
 - **GPS watches and e-bikes:** configs only. Add `data.json` before activating either. They are not populated research datasets.
 

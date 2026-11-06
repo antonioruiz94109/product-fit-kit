@@ -9,7 +9,7 @@ Use **3–5 entries in `filters`**, including any benchmark. Each has a unique `
 | Type | Additional settings |
 | --- | --- |
 | `number` | `unit`; `mode`: `max`, `min`, or `range`. Range needs `bands`, each with unique `id`, `label`, and `min` and/or `max`. Lower bounds are inclusive; upper bounds exclusive. |
-| `choice` | `values`: allowed strings, exactly as represented in evidence. |
+| `choice` | `values`: allowed filter choices. Optional editorial mapping preserves different source wording (see below). |
 | `yes_no` | No additional settings. The control means “require yes.” |
 | `benchmark` | `source`: a declared number/dimensions key; `checked`; either `limits` in L/W/D order, or numeric `limit` and `mode` (`min`/`max`). |
 
@@ -23,7 +23,7 @@ Keep a `data.json` containing `[]` until research is ready. Set `site.json`’s 
 
 | Category / field | Edge-case rule |
 | --- | --- |
-| Shoes / intended use | Retain exact manufacturer wording; do not infer categories. |
+| Shoes / intended use | Retain exact manufacturer wording on cards; use only the explicit editorial mapping for filters. |
 | Shoes / drop | Use published drop, not subtraction of uncertain stack values. |
 | Shoes / weight | Keep reference size; different sizes are not exact comparisons. |
 | Shoes / stack | Retain method and wording; do not infer missing total heights. |
@@ -40,3 +40,13 @@ Keep a `data.json` containing `[]` until research is ready. Set `site.json`’s 
 | E-bikes / weight | State battery inclusion; incompatible measurements are excluded. |
 | E-bikes / motor | Use an explicit location description; do not infer from watts. |
 | E-bikes / range | Brand estimate only; retain stated conditions. |
+
+## Editorial grouping for choice filters
+
+A choice filter can define `mapping` with `kind: "editorial"`, `label: "Editorial grouping"`, and `values`: an object mapping each exact manufacturer phrase to one or more entries in the filter’s `values` list. This grouping is an editorial decision, not a specification published by the brand.
+
+The shoe config’s filter choices are **Road daily / Road fast / Trail**. Its mapping sends “Daily Running, Walking” to Road daily, “Tempo Runs, Race” to Road fast, and “Trail Running, Hiking” to Trail. “Everyday Running, Quick Runs” belongs to both Road daily and Road fast. These are decisions about verified wording; review them when adding a phrase.
+
+Keep each record’s `value` and quote exactly as published. Cards show that wording and separately identify its editorial group; only filtering uses the mapping. An unmapped source phrase fails validation. Without a mapping, a choice behaves as before: its raw value must belong to the allowed list. Multiple groups still match with OR, and other filters combine with AND. Older shared links using recognized raw phrases resolve through the mapping.
+
+Under 768 px, Filters (n) counts active filter categories, including brand—not the number of selected chips. Filters start collapsed so products appear first. Changes update results and the Show X count immediately; Show X closes the controls and moves focus to results. Escape closes the controls and returns focus to the Filters button.

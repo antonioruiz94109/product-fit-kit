@@ -42,13 +42,17 @@
     else value = number(r.value) && (f.mode === 'min' ? r.value >= f.limit : r.value <= f.limit);
     return {state:'Calculated',value,checked:f.checked,note:'Computed from comparable published dimensions or measurements.'};
   }
+  function choiceGroups(f,value) {
+    if (!f.mapping) return [String(value)];
+    return Object.hasOwn(f.mapping.values, String(value)) ? f.mapping.values[String(value)] : [];
+  }
   function matches(p,c,selection,ignore) {
     return Object.entries(selection).every(([key, values]) => {
       if (key === ignore || !values || !values.length) return true;
       if (key === 'brand') return values.includes(p.brand);
       const f = c.filters.find(f=>f.key === key); if (!f) return true;
       const r = record(p,f); if (!usable(r)) return false;
-      if (f.type === 'choice') return values.includes(String(r.value));
+      if (f.type === 'choice') return choiceGroups(f,r.value).some(v=>values.includes(v));
       if (f.type === 'yes_no' || f.type === 'benchmark') return r.value === true;
       if (f.type === 'number') {
         if (f.mode === 'range') return values.some(id => { const b=f.bands.find(b=>b.id === id); return b && (b.min == null || r.value >= b.min) && (b.max == null || r.value < b.max); });
@@ -61,7 +65,7 @@
     const q = new URLSearchParams(search), s={};
     for (const f of [{key:'brand',type:'choice',values:c.brands.map(b=>b.name)},...c.filters]) {
       let v=q.getAll(f.key);
-      if (f.type === 'choice') v=v.filter(x=>f.values.includes(x));
+      if (f.type === 'choice') v=v.flatMap(x=>f.values.includes(x)?[x]:choiceGroups(f,x).filter(y=>f.values.includes(y)));
       else if (['yes_no','benchmark'].includes(f.type)) v=v.includes('yes')?['yes']:[];
       else if (f.type === 'number' && f.mode === 'range') v=v.filter(x=>f.bands.some(b=>b.id===x));
       else if (f.type === 'number') v=v.filter(x=>x.trim()!=='' && Number.isFinite(Number(x))).slice(0,1);
@@ -82,5 +86,5 @@
       return delta||fallback();
     });
   }
-  return {states,usable,number,convert,derived,validDate,stale,allowed,fields,record,matches,readSelection,writeSelection,sortProducts};
+  return {states,usable,number,convert,derived,validDate,stale,allowed,fields,record,choiceGroups,matches,readSelection,writeSelection,sortProducts};
 });

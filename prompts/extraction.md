@@ -1,7 +1,7 @@
 ## Rules
 
 - Use manufacturer pages only.
-- Give a word-for-word quote for every value.
+- Give a word-for-word quote for every value. Include the page’s exact label where one exists; do not copy a bare number without its label. Never invent a label.
 - Never fill a gap from memory, reviews or retailers.
 - Mark estimates as estimates.
 - Say “Not published” only after checking the brand page and confirming it does not list the spec.
@@ -14,9 +14,9 @@ Last tested with: [model, date — owner to fill in]
 
 Input: approved config, product list, and docs/data-rules.md. Ask for a missing format reference instead of guessing.
 
-Open each manufacturer product page. Build a JSON array with one object per product: id, brand, model, product_url, checked, fields. Record only the selected model/version. In fields, include every configured non-benchmark filter and display field, and price when enabled. Each record has value, unit where required, state, source_url, quote, checked, and note when needed. Benchmarks are computed by the site, never stored.
+Open each manufacturer product page. Build a JSON array with one object per product: id, brand, model, product_url, checked, fields. Record only the selected model/version. In fields, include every configured non-benchmark filter and display field, and price when enabled. Each record has value, unit where required, state, source_url, quote, source_label, checked, and note when needed. Benchmarks are computed by the site, never stored.
 
-Use the eight states exactly as defined in the data rules. Dates must be actual ISO research dates. Use short verbatim evidence containing the value and enough context to establish it. Do not silently normalize a choice to words that the source does not use; flag mismatches for a config review. For yes/no use a Boolean value and exact evidence_value wording supporting it. Null unavailable values need an explanatory note and the checked/attempted source URL.
+Use the eight states exactly as defined in the data rules. Dates must be actual ISO research dates. Use short verbatim evidence containing both the value and its page label when present. Preserve the page’s wording, capitalization and punctuation; retain line breaks between labels and values. Set source_label to that exact label, or null only when the page has no label. Do not invent “Price” beside an unlabeled price. For a mapped choice, keep the exact manufacturer wording in value and quote; the config’s explicitly labeled editorial mapping determines filter groups. Flag any wording absent from the mapping for owner review. For yes/no use a Boolean value and exact evidence_value wording supporting it. Null unavailable values need an explanatory note and the checked/attempted source URL.
 
 Conversions require original {value, unit} and decimals. Calculations require original [{value, unit}, …], the supported calculation name and decimals. Quote the original inputs and units; independently recompute the displayed result. Do not use unsupported arithmetic. Keep incompatible measurements as Measured differently with the method note; brand estimates never become Published numbers.
 

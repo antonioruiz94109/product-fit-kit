@@ -28,6 +28,10 @@ function validate(config,data, today=new Date().toISOString().slice(0,10)) {
     if(display.includes(f)&&f.type==='benchmark')err('config',f.key,'benchmark belongs in filters');
     if(['number','dimensions'].includes(f.type)&&!text(f.unit))err('config',f.key,'unit required');
     if(f.type==='choice'&&(!Array.isArray(f.values)||!f.values.length||f.values.some(v=>!text(v))||new Set(f.values).size!==f.values.length))err('config',f.key,'unique nonempty allowed string values required');
+    if(f.mapping!==undefined){
+      if(f.type!=='choice'||!object(f.mapping)||f.mapping.kind!=='editorial'||f.mapping.label!=='Editorial grouping'||!object(f.mapping.values)||!Object.keys(f.mapping.values).length)err('config',f.key,'mapping requires a choice filter, editorial kind, Editorial grouping label and source-to-groups values');
+      else for(const [source,groups] of Object.entries(f.mapping.values))if(!text(source)||!Array.isArray(groups)||!groups.length||new Set(groups).size!==groups.length||!groups.every(g=>Array.isArray(f.values)&&f.values.includes(g)))err('config',f.key,'every mapping source must name one or more unique allowed groups');
+    }
     if(f.type==='number'&&filters.includes(f)){
       if(!['min','max','range'].includes(f.mode))err('config',f.key,'mode must be min, max or range');
       if(f.mode==='range'&&(!Array.isArray(f.bands)||!f.bands.length||f.bands.some(b=>!object(b)||!text(b.id)||!text(b.label)||(b.min!=null&&!K.number(b.min))||(b.max!=null&&!K.number(b.max))||(b.min==null&&b.max==null)||(b.min!=null&&b.max!=null&&b.min>=b.max))||new Set((f.bands||[]).map(b=>b.id)).size!==(f.bands||[]).length))err('config',f.key,'range needs unique bands with numeric min and/or max');
@@ -70,10 +74,12 @@ function validate(config,data, today=new Date().toISOString().slice(0,10)) {
       }
       if(r.value==null||r.value==='')err(label,f.key,'value required for this state');
       if(!text(r.quote))err(label,f.key,'word-for-word quote required');
+      if(!Object.hasOwn(r,'source_label')||(r.source_label!==null&&!text(r.source_label)))err(label,f.key,'source_label must be the exact page label, or null when no label exists');
+      else if(r.source_label!==null&&(typeof r.quote!=='string'||!r.quote.includes(r.source_label)))err(label,f.key,'quote must include the exact source_label as well as the value');
       if(f.type==='number'&&(!K.number(r.value)||r.unit!==f.unit))err(label,f.key,'finite number and configured unit required');
       if(f.type==='dimensions'&&(!Array.isArray(r.value)||r.value.length!==3||!r.value.every(n=>K.number(n)&&n>0)||r.unit!==f.unit))err(label,f.key,'three positive L/W/D values and configured unit required');
       if(f.type==='yes_no'&&typeof r.value!=='boolean')err(label,f.key,'boolean value required');
-      if(f.type==='choice'&&!f.values.includes(r.value))err(label,f.key,'value not in allowed choices');
+      if(f.type==='choice'&&(typeof r.value!=='string'||(f.mapping?!Object.hasOwn(f.mapping.values,r.value):!f.values.includes(r.value))))err(label,f.key,'value not in allowed choices');
       if(f.type==='text'&&!text(r.value))err(label,f.key,'text value required');
       if(r.state==='Measured differently'&&!text(r.note))err(label,f.key,'measurement note required');
       let originals;

@@ -11,33 +11,37 @@
         "unit": "",
         "state": "Published",
         "source_url": "https://www.topoathletic.com/mens-phantom-4",
-        "quote": "Daily Running, Walking",
-        "checked": "2026-11-06"
+        "quote": "Best For:Daily Running, Walking",
+        "checked": "2026-11-06",
+        "source_label": "Best For:"
       },
       "drop": {
         "value": 5,
         "unit": "mm",
         "state": "Published",
         "source_url": "https://www.topoathletic.com/mens-phantom-4",
-        "quote": "5 mm",
-        "checked": "2026-11-06"
+        "quote": "Heel to Toe Drop:5 mm",
+        "checked": "2026-11-06",
+        "source_label": "Heel to Toe Drop:"
       },
       "weight": {
         "value": 9.3,
         "unit": "oz",
         "state": "Published",
         "source_url": "https://example.com/",
-        "quote": "9.3 OZ (M9)",
+        "quote": "Weight:9.3 OZ (M9)",
         "checked": "2026-11-06",
-        "note": "Men's US 9."
+        "note": "Men's US 9.",
+        "source_label": "Weight:"
       },
       "stack": {
         "value": "35 mm (heel) x 30 mm (forefoot)",
         "unit": "",
         "state": "Published",
         "source_url": "https://www.topoathletic.com/mens-phantom-4",
-        "quote": "35 mm (heel) x 30 mm (forefoot)",
-        "checked": "2026-11-06"
+        "quote": "Stack Height:35 mm (heel) x 30 mm (forefoot)",
+        "checked": "2026-11-06",
+        "source_label": "Stack Height:"
       },
       "price": {
         "value": 150,
@@ -46,7 +50,8 @@
         "source_url": "https://www.topoathletic.com/mens-phantom-4",
         "quote": "$150.00",
         "checked": "2026-11-06",
-        "price_kind": "manufacturer"
+        "price_kind": "manufacturer",
+        "source_label": null
       }
     }
   }

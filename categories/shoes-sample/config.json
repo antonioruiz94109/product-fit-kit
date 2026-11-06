@@ -6,19 +6,50 @@
       "key": "intended_use",
       "label": "Intended use",
       "type": "choice",
-      "hint": "Choose the brand’s stated use. Select more than one to broaden results.",
-      "edge_case": "Keep the manufacturer’s exact wording; do not infer use from reviews.",
+      "hint": "Editorial groupings of the brand’s stated use. Cards retain the original wording.",
+      "edge_case": "Map only verified brand wording to the editorial groups; retain the exact source value and quote.",
       "values": [
-        "Daily Running, Walking",
-        "Tempo Runs, Race",
-        "Trail Running, Hiking",
-        "Road Running",
-        "Road Racing",
-        "Everyday Running, Quick Runs",
-        "Trail run/Hiking",
-        "Everyday Run",
-        "Road running, Daily runs, Walking, Balanced support"
-      ]
+        "Road daily",
+        "Road fast",
+        "Trail"
+      ],
+      "mapping": {
+        "kind": "editorial",
+        "label": "Editorial grouping",
+        "values": {
+          "Daily Running, Walking": [
+            "Road daily"
+          ],
+          "Tempo Runs, Race": [
+            "Road fast"
+          ],
+          "Trail Running, Hiking": [
+            "Trail"
+          ],
+          "Road Running": [
+            "Road daily"
+          ],
+          "Road Racing": [
+            "Road fast"
+          ],
+          "Everyday Running, Quick Runs": [
+            "Road daily",
+            "Road fast"
+          ],
+          "Trail run/Hiking": [
+            "Trail"
+          ],
+          "Everyday Run": [
+            "Road daily"
+          ],
+          "Road running, Daily runs, Walking, Balanced support": [
+            "Road daily"
+          ],
+          "Trail Running, Race": [
+            "Trail"
+          ]
+        }
+      }
     },
     {
       "key": "drop",
@@ -87,12 +118,6 @@
       "name": "Brooks",
       "domains": [
         "brooksrunning.com"
-      ]
-    },
-    {
-      "name": "Altra",
-      "domains": [
-        "altrarunning.com"
       ]
     }
   ],

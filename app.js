@@ -19,6 +19,19 @@
     for(const f of sortFields){const o=make('option',f.label.replace('[brand]','brand'));o.value=f.key;$('sort').append(o);}
     const initialSort=new URLSearchParams(location.search).get('sort');$('sort').value=sortFields.some(f=>f.key===initialSort)?initialSort:'model';
     const counts=[];
+    const mobile=window.matchMedia('(max-width: 767px)');
+    let filtersOpen=false;
+    function setFilterPanel(open,returnFocus=false){
+      filtersOpen=open;
+      $('filter-panel').hidden=mobile.matches&&!filtersOpen;
+      $('filter-toggle').setAttribute('aria-expanded',String(mobile.matches&&filtersOpen));
+      if(returnFocus&&mobile.matches)$('filter-toggle').focus();
+    }
+    $('filter-toggle').addEventListener('click',()=>setFilterPanel(!filtersOpen));
+    $('show-results').addEventListener('click',()=>{setFilterPanel(false);$('results').focus();$('results').scrollIntoView({block:'start'});});
+    $('filter-panel').addEventListener('keydown',event=>{if(event.key==='Escape'&&mobile.matches){event.preventDefault();setFilterPanel(false,true);}});
+    mobile.addEventListener('change',()=>setFilterPanel(false));
+    setFilterPanel(false);
     function updateURL(){const q=K.writeSelection(selection,$('sort').value==='model'?'':$('sort').value);history.replaceState(null,'',location.pathname+(q?'?'+q:'')+location.hash);}
     function changed(key,values){if(values.length)selection[key]=values;else delete selection[key];updateURL();renderResults();}
     function renderFilters(){
@@ -63,6 +76,7 @@
         const labels={'Published':'Published','Converted':'Converted','Calculated':'Calculated from published specs','Measured differently':'Measured differently','Brand estimate':'Brand estimate'};
         if(labels[r.state])dd.append(make('span',labels[r.state],'state'));
         if(r.state==='Not yet verified')dd.classList.add('unverified');
+        if(f.mapping&&K.usable(r))dd.append(make('span',`${f.mapping.label}: ${K.choiceGroups(f,r.value).join(' / ')}`,'state'));
         if(r.note)dd.append(make('span',r.note,'spec-note'));
         if(f.key==='price'&&r.price_kind==='dealer'){dd.append(make('span',`Dealer price, checked ${r.checked}`,'state'));dd.append(safeLink(r.source_url,'View dealer price ↗'));}
         if(f.key==='price'&&r.price_kind==='manufacturer')dd.append(make('span',`Manufacturer US price, checked ${r.checked}`,'state'));
@@ -82,6 +96,8 @@
     }
     function renderResults(){
       const found=K.sortProducts(products.filter(p=>K.matches(p,config,selection)),config,$('sort').value);
+      $('filter-toggle').textContent=`Filters (${Object.keys(selection).length})`;
+      $('show-results').textContent=`Show ${found.length}`;
       $('result-count').textContent=`Showing ${found.length} of ${products.length}`;$('cards').replaceChildren(...found.map(card));
       $('empty').hidden=found.length>0;
       $('empty-title').textContent=products.length?'No matches just yet.':'Your next shortlist starts here.';

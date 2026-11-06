@@ -22,7 +22,8 @@
     </section>
     <details id="explainer" class="explainer" hidden><summary id="explainer-title"></summary><p id="explainer-text"></p></details>
     <div class="workspace" id="workspace" hidden>
-      <aside aria-label="Product filters"><div class="filter-heading"><h2>Make it yours</h2><button id="reset" class="text-button" type="button">Reset all</button></div><div id="filters"></div><p class="filter-note">Choose any combination. Only comparable, verified values match an active filter.</p></aside>
+      <button id="filter-toggle" class="mobile-only filter-toggle" type="button" aria-controls="filter-panel" aria-expanded="false">Filters (0)</button>
+      <aside id="filter-panel" aria-label="Product filters"><div class="filter-heading"><h2>Make it yours</h2><button id="reset" class="text-button" type="button">Reset all</button></div><div id="filters"></div><p class="filter-note">Choose any combination. Only comparable, verified values match an active filter.</p><button id="show-results" class="mobile-only show-results" type="button">Show results</button></aside>
       <section id="results" aria-labelledby="result-count" tabindex="-1">
         <div class="results-bar"><h2 id="result-count" aria-live="polite"></h2><label class="sort">Sort by <select id="sort"><option value="model">Brand &amp; model</option></select></label></div>
         <div id="cards" class="cards"></div>

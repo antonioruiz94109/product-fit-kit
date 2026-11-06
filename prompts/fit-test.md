@@ -1,7 +1,7 @@
 ## Rules
 
 - Use manufacturer pages only.
-- Give a word-for-word quote for every value.
+- Give a word-for-word quote for every value. Include the page’s exact label where one exists; do not copy a bare number without its label. Never invent a label.
 - Never fill a gap from memory, reviews or retailers.
 - Mark estimates as estimates.
 - Say “Not published” only after checking the brand page and confirming it does not list the spec.
