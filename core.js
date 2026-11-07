@@ -36,10 +36,12 @@
   function record(p, f) {
     if (f.type !== 'benchmark') return p.fields[f.key];
     const r = p.fields[f.source];
-    if (!r || !['Published','Converted'].includes(r.state)) return {state:'Not yet verified',value:null};
+    if (!r || !['Published','Converted'].includes(r.state)) return {state:r?.state==='Conflicting'?'Conflicting':'Unavailable',value:null,note:`Cannot compute this benchmark: ${r?.state||'source record missing'}. Only Published or Converted source values are comparable.`};
+    // Compare unrounded conversions so display rounding cannot turn an oversize item into a fit.
+    const comparable=r.state==='Converted'?convert(r.original?.value,r.original?.unit,r.unit):r.value;
     let value;
-    if (Array.isArray(r.value)) value = r.value.length === 3 && r.value.every((n,i)=>number(n) && n <= f.limits[i]);
-    else value = number(r.value) && (f.mode === 'min' ? r.value >= f.limit : r.value <= f.limit);
+    if (Array.isArray(comparable)) value = comparable.length === 3 && comparable.every((n,i)=>number(n) && n <= f.limits[i]+1e-9);
+    else value = number(comparable) && (f.mode === 'min' ? comparable >= f.limit-1e-9 : comparable <= f.limit+1e-9);
     return {state:'Calculated',value,checked:f.checked,note:'Computed from comparable published dimensions or measurements.'};
   }
   function choiceGroups(f,value) {

@@ -1,6 +1,6 @@
 # Write the category config
 
-Copy `categories/luggage/config.json` as your worked example. It is valid with an empty `brands` list because its data is empty. Before extraction, add each brand as `{ "name": "…", "domains": ["…"] }`, replacing the ellipses with its real name and verified hostname. Never use placeholders as product evidence. Optional `dealer_domains` belong to that brand and must be brand-hosted subdomains; they are allowed only for price.
+Copy `categories/luggage/config.json` as your worked example. It includes a researched starter catalog and configured manufacturer domains. For a new category, start with empty data and add each verified brand as `{ "name": "…", "domains": ["…"] }`, replacing the ellipses with its real name and verified hostname. Never use placeholders as product evidence. Optional `dealer_domains` belong to that brand and must be brand-hosted subdomains; they are allowed only for price.
 
 Set `name`, the buyer `question`, `explainer` (`title` and `text`), and optional `notes`. `price` defaults to false. Optional `notice` appears above the filters.
 
@@ -13,11 +13,11 @@ Use **3–5 entries in `filters`**, including any benchmark. Each has a unique `
 | `yes_no` | No additional settings. The control means “require yes.” |
 | `benchmark` | `source`: a declared number/dimensions key; `checked`; either `limits` in L/W/D order, or numeric `limit` and `mode` (`min`/`max`). |
 
-`display_fields` support `number`, `choice`, `yes_no`, `dimensions` (three L/W/D values plus `unit`), and `text`. They are shown but never filtered or sorted. Stack height uses text because a heel/forefoot pair is not three-dimensional size.
+`display_fields` support `number`, `choice`, `yes_no`, `dimensions` (three ordered values plus `unit`; optional `axes` labels such as H/W/D, default L/W/D), and `text`. They are shown but never filtered or sorted. Stack height uses text because a heel/forefoot pair is not three-dimensional size.
 
-In luggage, `fits` compares the `size` field against 22 × 14 × 9 inches. It accepts only Published or Converted evidence, with no rotation, compression or airline-policy claim. Body-only size must be Measured differently. The other filters are empty weight, shell and wheels. The benchmark date records this configured size check, not airline research.
+Luggage uses three filters: listed empty weight, construction and wheel mechanism. Construction and wheel choices use explicit editorial mappings. Overall dimensions are display-only: the five-product probe found two conflicting or unverified measurements, so the proposed size benchmark was removed under the method’s rule. See the category’s RESEARCH.md for the evidence. Generic benchmarks remain supported: name a number/dimensions source and define the threshold in its unit and axis order. Only Published or Converted source values are eligible; converted comparisons use unrounded originals. A benchmark date records the rule review, not airline research.
 
-Keep a `data.json` containing `[]` until research is ready. Set `site.json`’s `category` to the folder name and update its `title`; no code changes are needed. GPS watches and e-bikes are config-only: create their empty data file before activating either.
+For an empty category, keep a `data.json` containing `[]` until research is ready. The supplied luggage file is now populated. Set `site.json`’s `category` to the folder name and update its `title`; no code changes are needed. GPS watches and e-bikes are config-only: create their empty data file before activating either.
 
 ## Included measurement rules
 
@@ -27,10 +27,10 @@ Keep a `data.json` containing `[]` until research is ready. Set `site.json`’s 
 | Shoes / drop | Use published drop, not subtraction of uncertain stack values. |
 | Shoes / weight | Keep reference size; different sizes are not exact comparisons. |
 | Shoes / stack | Retain method and wording; do not infer missing total heights. |
-| Luggage / size and fit | Include wheels and handles in L/W/D order; exclude body-only sizes from the benchmark. |
+| Luggage / size | Confirm unexpanded H/W/D includes wheels and handles; unknown definitions stay Not yet verified, contradictions stay Conflicting. Display-only. |
 | Luggage / weight | Use empty, not packed weight. |
-| Luggage / shell | Use explicit hard/soft classification. |
-| Luggage / wheels | Count assemblies, not individual tires. |
+| Luggage / construction | Preserve manufacturer material/type wording; map Hard/Soft editorially. |
+| Luggage / wheels | Group Spinner/Two-wheel mechanisms editorially; do not confuse tires and assemblies. |
 | Watches / battery | Retain the named GPS mode; estimated runtime stays Brand estimate. |
 | Watches / GNSS | Multiple systems do not establish multi-band reception. |
 | Watches / weight | State strap inclusion; incompatible measurements are excluded. |

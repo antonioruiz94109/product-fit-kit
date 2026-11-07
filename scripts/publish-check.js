@@ -5,6 +5,8 @@ function validate(config,data, today=new Date().toISOString().slice(0,10)) {
   const err=(p,f,m)=>errors.push(`${p} / ${f}: ${m}`), warn=(p,f,m)=>warnings.push(`${p} / ${f}: ${m}`);
   const object=x=>x && typeof x==='object'&&!Array.isArray(x);
   const text=x=>typeof x==='string'&&x.trim().length>0;
+  const unitForms={g:'g|grams?',kg:'kg|kilograms?',oz:'oz|ounces?',lb:'lb|lbs|pounds?',mm:'mm|millimet(?:er|re)s?',cm:'cm|centimet(?:er|re)s?',in:'in|inch(?:es)?|"|″',V:'V|volts?',Ah:'Ah|amp[ -]?hours?',Wh:'Wh|watt[ -]?hours?',kWh:'kWh|kilowatt[ -]?hours?',hours:'hours?|hrs?',minutes:'minutes?|mins?'};
+  const hasUnit=(quote,unit)=>typeof unit==='string'&&Object.hasOwn(unitForms,unit)&&new RegExp(`(^|[^A-Za-z])(?:${unitForms[unit]})(?=$|[^A-Za-z])`,'i').test(quote);
   const date=(x,p,f)=>{if(!K.validDate(x))err(p,f,'checked must be a real ISO date (YYYY-MM-DD)');else if(x>today)err(p,f,'checked cannot be in the future');else if(K.stale(x,today))warn(p,f,'May be out of date (older than 12 months)');};
   if(!object(config))return {errors:['config / root: must be an object'],warnings};
   const filters=Array.isArray(config.filters)?config.filters:[];
@@ -27,6 +29,7 @@ function validate(config,data, today=new Date().toISOString().slice(0,10)) {
     if(filters.includes(f)&&['dimensions','text'].includes(f.type))err('config',f.key,'dimensions and text are display-only');
     if(display.includes(f)&&f.type==='benchmark')err('config',f.key,'benchmark belongs in filters');
     if(['number','dimensions'].includes(f.type)&&!text(f.unit))err('config',f.key,'unit required');
+    if(f.type==='dimensions'&&f.axes!==undefined&&(!Array.isArray(f.axes)||f.axes.length!==3||f.axes.some(x=>!text(x))||new Set(f.axes).size!==3))err('config',f.key,'axes must contain three distinct display labels in source order');
     if(f.type==='choice'&&(!Array.isArray(f.values)||!f.values.length||f.values.some(v=>!text(v))||new Set(f.values).size!==f.values.length))err('config',f.key,'unique nonempty allowed string values required');
     if(f.mapping!==undefined){
       if(f.type!=='choice'||!object(f.mapping)||f.mapping.kind!=='editorial'||f.mapping.label!=='Editorial grouping'||!object(f.mapping.values)||!Object.keys(f.mapping.values).length)err('config',f.key,'mapping requires a choice filter, editorial kind, Editorial grouping label and source-to-groups values');
@@ -34,7 +37,10 @@ function validate(config,data, today=new Date().toISOString().slice(0,10)) {
     }
     if(f.type==='number'&&filters.includes(f)){
       if(!['min','max','range'].includes(f.mode))err('config',f.key,'mode must be min, max or range');
-      if(f.mode==='range'&&(!Array.isArray(f.bands)||!f.bands.length||f.bands.some(b=>!object(b)||!text(b.id)||!text(b.label)||(b.min!=null&&!K.number(b.min))||(b.max!=null&&!K.number(b.max))||(b.min==null&&b.max==null)||(b.min!=null&&b.max!=null&&b.min>=b.max))||new Set((f.bands||[]).map(b=>b.id)).size!==(f.bands||[]).length))err('config',f.key,'range needs unique bands with numeric min and/or max');
+      if(f.mode==='range'){
+        const bands=Array.isArray(f.bands)?f.bands:[];
+        if(!bands.length||bands.some(b=>!object(b)||!text(b.id)||!text(b.label)||(b.min!=null&&!K.number(b.min))||(b.max!=null&&!K.number(b.max))||(b.min==null&&b.max==null)||(b.min!=null&&b.max!=null&&b.min>=b.max))||new Set(bands.map(b=>b?.id)).size!==bands.length)err('config',f.key,'range needs unique bands with numeric min and/or max');
+      }
     }
     if(f.type==='benchmark'){
       const source=all.find(x=>x?.key===f.source);
@@ -96,7 +102,7 @@ function validate(config,data, today=new Date().toISOString().slice(0,10)) {
       const contains=v=>{
         const s=String(v),q=r.quote||'';
         if(typeof v==='number') return (q.match(/-?\d+(?:,\d{3})*(?:\.\d+)?/g)||[]).some(token=>Number(token.replace(/,/g,''))===v);
-        return q.toLowerCase().includes(s.toLowerCase());
+        return q.includes(s);
       };
       if(typeof r.quote==='string'){
         const vals=(Array.isArray(originals)?originals.filter(object).flatMap(x=>x.value):null) || (Array.isArray(r.value)?r.value:[r.value]);
@@ -104,7 +110,7 @@ function validate(config,data, today=new Date().toISOString().slice(0,10)) {
         if(typeof r.value==='boolean'){
           if(!text(r.evidence_value)||!r.quote.includes(r.evidence_value))err(label,f.key,'yes/no record requires exact evidence_value in quote');
         }else if(!vals.every(contains))err(label,f.key,'quote does not contain the value or original inputs as written');
-        if(Array.isArray(originals)&&originals.filter(object).some(x=>!r.quote.includes(x.unit)))err(label,f.key,'quote must include original input units');
+        if(Array.isArray(originals)&&originals.filter(object).some(x=>!hasUnit(r.quote,x.unit)))err(label,f.key,'quote must include original input units');
       }
       if(f.key==='price'){
         if(!['manufacturer','dealer'].includes(r.price_kind))err(label,f.key,'price_kind must be manufacturer or dealer');

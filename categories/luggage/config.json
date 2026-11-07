@@ -1,21 +1,7 @@
 {
   "name": "Luggage",
-  "question": "Will this bag fit a 22 × 14 × 9 in size benchmark?",
+  "question": "Which carry-on matches your weight, construction and wheel preferences?",
   "filters": [
-    {
-      "key": "fits",
-      "label": "Fits 22 × 14 × 9 in",
-      "type": "benchmark",
-      "hint": "Compare overall size, including wheels and handles. This is a size benchmark, not an airline promise.",
-      "edge_case": "Body-only dimensions are Measured differently and excluded. Preserve L/W/D order; do not rotate or compress.",
-      "source": "size",
-      "limits": [
-        22,
-        14,
-        9
-      ],
-      "checked": "2026-11-06"
-    },
     {
       "key": "weight",
       "label": "Empty weight",
@@ -27,41 +13,158 @@
     },
     {
       "key": "shell",
-      "label": "Shell",
+      "label": "Construction",
       "type": "choice",
-      "hint": "Choose the construction that suits your packing.",
-      "edge_case": "Use the brand’s explicit hard or soft classification.",
+      "hint": "Choose a hard shell or soft fabric construction.",
+      "edge_case": "Keep exact manufacturer wording in the record. Group construction editorially; do not infer durability or protection.",
       "values": [
-        "hard",
-        "soft"
-      ]
+        "Hard",
+        "Soft"
+      ],
+      "mapping": {
+        "kind": "editorial",
+        "label": "Editorial grouping",
+        "values": {
+          "High-density fabric": [
+            "Soft"
+          ],
+          "soft-sided": [
+            "Soft"
+          ],
+          "100% polycarbonate shell": [
+            "Hard"
+          ],
+          "Premium Ultra-Durable Ballistic Nylon": [
+            "Soft"
+          ],
+          "Hardside (Polypro)": [
+            "Hard"
+          ],
+          "nylon fabric": [
+            "Soft"
+          ],
+          "Polyester fabric": [
+            "Soft"
+          ],
+          "polycarbonate shell": [
+            "Hard"
+          ],
+          "high-strength nylon": [
+            "Soft"
+          ],
+          "Polypropylene": [
+            "Hard"
+          ],
+          "Polycarbonate": [
+            "Hard"
+          ]
+        }
+      }
     },
     {
       "key": "wheels",
-      "label": "Wheels",
+      "label": "Wheel mechanism",
       "type": "choice",
-      "hint": "Choose two wheels or four.",
-      "edge_case": "Count wheel assemblies, not individual tires.",
+      "hint": "Choose a spinner or a two-wheel rolling design.",
+      "edge_case": "Group the manufacturer’s stated wheel mechanism. Do not confuse individual tires with wheel assemblies.",
       "values": [
-        "2",
-        "4"
-      ]
+        "Spinner",
+        "Two-wheel"
+      ],
+      "mapping": {
+        "kind": "editorial",
+        "label": "Editorial grouping",
+        "values": {
+          "spinner wheels": [
+            "Spinner"
+          ],
+          "360° 4-wheel spinners": [
+            "Spinner"
+          ],
+          "360 smooth-gliding wheels": [
+            "Spinner"
+          ],
+          "2 Wheels": [
+            "Two-wheel"
+          ],
+          "Spinner": [
+            "Spinner"
+          ],
+          "360° MagnaTrac® spinner wheels": [
+            "Spinner"
+          ],
+          "2 high-performance ball bearing wheels": [
+            "Two-wheel"
+          ],
+          "8 Spinner wheels": [
+            "Spinner"
+          ],
+          "360° smooth-gliding wheels": [
+            "Spinner"
+          ],
+          "360° spinner wheels": [
+            "Spinner"
+          ],
+          "360° smooth-gliding spinner wheels": [
+            "Spinner"
+          ],
+          "Spinner Wheels": [
+            "Spinner"
+          ],
+          "dual spinner wheels": [
+            "Spinner"
+          ]
+        }
+      }
     }
   ],
   "display_fields": [
     {
       "key": "size",
-      "label": "Overall size with wheels and handles",
+      "label": "Overall size with wheels and handles (H × W × D)",
       "type": "dimensions",
-      "hint": "Overall dimensions determine the size benchmark.",
-      "edge_case": "Use L × W × D including wheels and handles; body-only dimensions are Measured differently.",
-      "unit": "in"
+      "hint": "Unexpanded overall dimensions, when the measurement definition is verified.",
+      "edge_case": "Use unexpanded H × W × D including wheels and handles. Keep conflicting or unverified measurement definitions out of benchmarks.",
+      "unit": "in",
+      "axes": [
+        "H",
+        "W",
+        "D"
+      ]
     }
   ],
   "explainer": {
-    "title": "Why body size and overall size differ",
-    "text": "Body size can omit wheels and handles. The benchmark uses only comparable overall dimensions in L × W × D order. It does not establish an airline’s allowance; check your carrier before travel."
+    "title": "Why dimensions do not guarantee airline acceptance",
+    "text": "Brands may publish case size, overall size or expanded size. These are different measurements. The dimensions shown here include wheels and handles only when confirmed, in height × width × depth order. Check your carrier directly; measurements alone do not guarantee acceptance."
   },
-  "brands": [],
-  "price": false
+  "brands": [
+    {
+      "name": "Travelpro",
+      "domains": [
+        "travelpro.com"
+      ]
+    },
+    {
+      "name": "Away",
+      "domains": [
+        "awaytravel.com"
+      ]
+    },
+    {
+      "name": "Briggs & Riley",
+      "domains": [
+        "briggs-riley.com",
+        "briggs-riley.co.uk"
+      ]
+    },
+    {
+      "name": "Samsonite",
+      "domains": [
+        "samsonite.com"
+      ]
+    }
+  ],
+  "price": false,
+  "notice": "Curated US-market starter catalog. Manufacturer pages checked 2026-11-07. Not comprehensive.",
+  "notes": "Construction and wheel groups are editorial; cards retain the manufacturer’s wording. Dimensions are display-only. Price is not tracked."
 }

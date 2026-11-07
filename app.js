@@ -58,10 +58,11 @@
       }
     }
     function valueText(r,f){
+      if(f.type==='benchmark'&&!K.usable(r))return 'Cannot determine';
       if(r.state==='Not published')return null;
       if(r.state==='Not yet verified')return 'Not yet verified';
       if(typeof r.value==='boolean')return r.value?'Yes':'No';
-      if(Array.isArray(r.value))return `${r.value.join(' × ')} ${r.unit||''}`;
+      if(Array.isArray(r.value))return `${r.value.map((v,i)=>`${(f.axes||['L','W','D'])[i]} ${v}`).join(' × ')} ${r.unit||''}`;
       if(f.key==='price')return new Intl.NumberFormat('en-US',{style:'currency',currency:'USD'}).format(r.value);
       return `${r.value}${r.unit?' '+r.unit:''}`;
     }

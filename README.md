@@ -40,9 +40,9 @@ Read [the method](docs/method.md), [data rules](docs/data-rules.md) and [prompt 
 ## Included examples
 
 - **Shoes:** ten men’s models across six brands; active by default. **Sample data copied from Stack & Drop on 2026-11-06. Not kept up to date.** Values were checked against current manufacturer pages; the [change report](CHANGE_REPORT.md) lists differences and unresolved evidence. Intended-use filters use the editorial groups Road daily / Road fast / Trail; cards retain exact manufacturer wording and labeled quotes. Below 768 px, open Filters (n) and choose Show X to return to results. No verified dealer offer was found; that requested example is documented as missing.
-- **Luggage:** config plus empty data array; demonstrates the friendly empty state and a dimension-based benchmark, not a promise of airline acceptance.
+- **Luggage:** a curated 15-model US-market starter catalog across four brands, researched 2026-11-07. Filters cover weight, construction and wheel mechanism. Dimensions are display-only after the probe found unreliable comparisons. Read the [research report](categories/luggage/RESEARCH.md) for scope, sources and unresolved evidence. It is not comprehensive and makes no airline-fit promise.
 - **GPS watches and e-bikes:** configs only. Add `data.json` before activating either. They are not populated research datasets.
 
-Switch the active category by editing only `site.json`. For luggage, use `"category": "luggage"` and choose your site title. Research output goes in the category’s data file; everyday filter definitions live in config. Test fixtures are intentionally damaged copies of verified shoe records, kept under `tests/` and never loaded by the site.
+Shoes remain the default. Switch the active category by editing only `site.json`. For luggage, use `"category": "luggage"` and choose your site title. Research output goes in the category’s data file; everyday filter definitions live in config. Test fixtures are intentionally damaged copies of verified shoe records, kept under `tests/` and never loaded by the site.
 
 Inspired by [Stack & Drop](https://antonioruiz94109.github.io/stack-and-drop/).
