@@ -29,6 +29,7 @@ function validate(config,data, today=new Date().toISOString().slice(0,10)) {
     if(filters.includes(f)&&['dimensions','text'].includes(f.type))err('config',f.key,'dimensions and text are display-only');
     if(display.includes(f)&&f.type==='benchmark')err('config',f.key,'benchmark belongs in filters');
     if(['number','dimensions'].includes(f.type)&&!text(f.unit))err('config',f.key,'unit required');
+    if(f.qualifier_required!==undefined&&typeof f.qualifier_required!=='boolean')err('config',f.key,'qualifier_required must be true or false');
     if(f.type==='dimensions'&&f.axes!==undefined&&(!Array.isArray(f.axes)||f.axes.length!==3||f.axes.some(x=>!text(x))||new Set(f.axes).size!==3))err('config',f.key,'axes must contain three distinct display labels in source order');
     if(f.type==='choice'&&(!Array.isArray(f.values)||!f.values.length||f.values.some(v=>!text(v))||new Set(f.values).size!==f.values.length))err('config',f.key,'unique nonempty allowed string values required');
     if(f.mapping!==undefined){
@@ -73,6 +74,12 @@ function validate(config,data, today=new Date().toISOString().slice(0,10)) {
       if(!brand||!K.allowed(r.source_url,[...brand.domains,...(f.key==='price'?(brand.dealer_domains||[]):[])]))err(label,f.key,'source must be HTTPS on this brand’s allowed domains (dealer only for price)');
       if(['number','dimensions'].includes(f.type)&&r.unit!==f.unit)err(label,f.key,'configured unit is required, including unavailable records');
       if(brand&&f.key!=='price'&&K.allowed(r.source_url,brand.dealer_domains||[]))err(label,f.key,'dealer pages allowed for price only');
+      const unavailable=['Not published','Not yet verified'].includes(r.state);
+      const hasQualifier=Object.hasOwn(r,'qualifier_quote')||Object.hasOwn(r,'qualifier_url');
+      if(hasQualifier||(f.qualifier_required&&!unavailable)){
+        if(!text(r.qualifier_quote))err(label,f.key,'qualifier_quote is required for the field qualifier');
+        if(!text(r.qualifier_url)||!brand||!K.allowed(r.qualifier_url,[...brand.domains,...(f.key==='price'?(brand.dealer_domains||[]):[])])||(f.key!=='price'&&brand&&K.allowed(r.qualifier_url,brand.dealer_domains||[])))err(label,f.key,'qualifier_url must be HTTPS on this brand’s allowed domains (dealer only for price)');
+      }
       if(['Not published','Not yet verified'].includes(r.state)){
         if(r.value!==null)err(label,f.key,'unavailable values must be null');
         if(!text(r.note))err(label,f.key,'note must explain checked omission or failed retrieval');

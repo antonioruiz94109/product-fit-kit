@@ -88,6 +88,9 @@
         else{
           const evidence=make('details',null,'evidence');evidence.append(make('summary',r.quote?'Source & exact quote':'Source & check details'));
           if(r.quote)evidence.append(make('blockquote',r.quote));evidence.append(safeLink(r.source_url,'Open source ↗'),make('span',` · Checked ${r.checked}`));
+          if(r.qualifier_quote&&r.qualifier_url){
+            evidence.append(make('p','Evidence for the field qualifier'),make('blockquote',r.qualifier_quote),safeLink(r.qualifier_url,'Open qualifier source ↗'));
+          }
           if(r.original)evidence.append(make('p','Published original: '+(Array.isArray(r.original)?r.original.map(x=>`${x.value} ${x.unit}`).join(' × '):`${r.original.value} ${r.original.unit}`)));
           dd.append(evidence);
         }

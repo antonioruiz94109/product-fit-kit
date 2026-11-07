@@ -6,7 +6,7 @@ Updated 2026-11-07. Built on the existing `build/product-fit-kit` review branch.
 
 - Buildless HTML/CSS/JavaScript template driven by site/config/data JSON; no framework, runtime dependencies, hosted AI, keys or product images.
 - Eight evidence states; configurable numeric min/max/range, choice, yes/no and benchmark behavior; automatic brand facet; OR-within/AND-across matching; comparable-value counts; reset, URL state and sorting.
-- Exact manufacturer wording on cards with source URLs, labeled quotes, dates and state notes. Optional choice mappings explicitly identify editorial groupings.
+- Exact manufacturer wording on cards with source URLs, labeled quotes, qualifier quotes and links, dates and state notes. Optional choice mappings explicitly identify editorial groupings.
 - Below 768 px, Filters (n) reveals controls and Show X returns to results. Keyboard focus, Escape and resizing are handled. Every visible control meets the 32 px minimum.
 - Five guides, four tool-neutral prompts, MIT license, source/arithmetic validation, deliberately altered fixtures and a non-deploying GitHub Action.
 - **Shoes remain the default:** ten men's models across six brands. Intended-use choices are Road daily / Road fast / Trail; cards preserve brand wording. Verified Topo MTN Racer 4 replaced Altra Lone Peak 9.
@@ -52,7 +52,7 @@ The ten men's source records came from Stack & Drop commit `b1a8970482374f603529
 
 ## Verification results
 
-**32 automated tests passed.** All four category configs/data sets pass the publish check; four expected luggage conflict warnings do not fail it. Tests cover required failing fixtures, warn-only records, mappings and legacy links, source labels, domain/date/unit checks, conversions, battery arithmetic, dimensions, unrounded benchmarks, malformed configs, filters, sorting and populated luggage. The actual command-line checker was tested for failure/pass exit codes with each required fixture.
+**35 automated tests passed.** All four category configs/data sets pass the publish check; four expected luggage conflict warnings do not fail it. Tests cover required failing fixtures, warn-only records, mappings and legacy links, source labels, domain/date/unit checks, conversions, battery arithmetic, dimensions, unrounded benchmarks, malformed configs, filters, sorting and populated luggage. The actual command-line checker was tested for failure/pass exit codes with each required fixture.
 
 **Browser checks passed in installed Chrome.** Default shoes, populated luggage, editorial/raw wording, labeled quotes, numeric and choice filters, OR/AND, shared links, hidden conflicts, unverified values, unavailable sort order, mobile counts/Show/focus/Escape, and the empty state were checked. Altered fixtures exercised dealer labels, incompatible measurements and stale warnings. At 375, 767, 768 and 1440 px there was no horizontal overflow or visible control below 32 px, and no JavaScript errors. Desktop/mobile screenshots were inspected. Category switching required only site settings, not application code.
 
@@ -61,3 +61,13 @@ The existing bundled browser tooling was used; no dependency or build step was a
 ## Review boundaries
 
 The complete template and researched luggage starter catalog are ready for review, with the evidence limits above. Market representativeness, refresh frequency, actual airline acceptance and physical measurement equivalence are not certified. The owner decides whether and when to merge and, separately, enable Pages. No change in this branch deploys the site.
+
+## Qualifier-evidence revision — 2026-11-07
+
+Added optional paired `qualifier_quote` and `qualifier_url` record fields. Luggage size explicitly sets `qualifier_required: true` in config, keeping the validator category-independent. All 12 valued size records, including hidden Conflicting records, now have verbatim evidence for wheels/handles inclusion. Travelpro uses its explicit dimension label; Away uses its measurement-inclusion sentence; Briggs & Riley uses the previously verified matching-model UK manufacturer pages. Their assertions/URLs were removed from qualifier notes and placed in the dedicated fields; notes retain expansion, variant and conflict context. `briggs-riley.co.uk` remains explicitly allowed for Briggs & Riley.
+
+The checker rejects missing or empty required qualifier evidence, incomplete optional pairs, insecure URLs, another brand’s source, and hostname lookalikes. Three null Not yet verified size records may omit the pair because no qualified measurement is asserted; no evidence was invented. Any supplied pair is still checked. As with numeric quotes, the checker does not fetch pages or certify that a quote supports a qualifier; the source review supplies that judgment.
+
+Cards show the qualifier quote and a separate source link inside their existing source details. Extraction/verification prompts and schema/config guides explain the rule. README now explicitly identifies removal of the luggage size-fit filter as an example of the method rejecting a filter the data cannot support.
+
+All four category checks and 35 automated tests pass, with the same four expected conflict warnings. Full browser regression for both categories passed, including the new Away qualifier quote and Briggs UK link, mobile layouts, filters, shared links, empty data and evidence-state handling. No merge or Pages activation was performed.

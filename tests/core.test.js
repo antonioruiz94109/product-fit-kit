@@ -133,3 +133,26 @@ test('original unit must be a unit token, not a letter inside the source label',
  r.quote=r.quote.replace('325g','325oz');
  assert.ok(validate(c,[p],today).errors.some(e=>e.includes('original input units')));
 });
+test('luggage size requires paired qualifier evidence for every valued state',()=>{
+ const config=read('categories/luggage/config.json'),products=read('categories/luggage/data.json');
+ assert.equal(config.display_fields.find(f=>f.key==='size').qualifier_required,true);
+ for(const state of ['Published','Conflicting'])for(const key of ['qualifier_quote','qualifier_url']){
+  const p=structuredClone(products[0]);p.fields.size.state=state;delete p.fields.size[key];
+  assert.ok(validate(config,[p],today).errors.some(e=>e.includes(key)),state+' '+key);
+ }
+ const p=structuredClone(products[0]);p.fields.size.qualifier_quote='   ';assert.ok(validate(config,[p],today).errors.some(e=>e.includes('qualifier_quote')));
+});
+test('qualifier URLs enforce brand domains and permit explicitly allowed UK evidence',()=>{
+ const config=read('categories/luggage/config.json'),products=read('categories/luggage/data.json');
+ for(const url of ['https://example.com/','https://travelpro.com.example.com/','http://travelpro.com/','https://www.awaytravel.com/']){
+  const p=structuredClone(products[0]);p.fields.size.qualifier_url=url;assert.ok(validate(config,[p],today).errors.some(e=>e.includes('qualifier_url')));
+ }
+ const uk=products.filter(p=>p.brand==='Briggs & Riley');assert.equal(uk.length,3);assert.deepEqual(validate(config,uk,today).errors,[]);
+ const withoutUK=structuredClone(config);withoutUK.brands.find(b=>b.name==='Briggs & Riley').domains=['briggs-riley.com'];assert.ok(validate(withoutUK,uk,today).errors.some(e=>e.includes('qualifier_url')));
+});
+test('unavailable values need no fabricated qualifier; optional pairs remain validated',()=>{
+ const config=read('categories/luggage/config.json'),unknown=read('categories/luggage/data.json').filter(p=>p.fields.size.state==='Not yet verified');assert.equal(unknown.length,3);assert.deepEqual(validate(config,unknown,today).errors,[]);
+ const p=structuredClone(data[0]);assert.deepEqual(validate(c,[p],today).errors,[]);p.fields.drop.qualifier_quote=p.fields.drop.quote;
+ assert.ok(validate(c,[p],today).errors.some(e=>e.includes('qualifier_url')));p.fields.drop.qualifier_url=p.fields.drop.source_url;assert.deepEqual(validate(c,[p],today).errors,[]);
+ const malformed=structuredClone(config);malformed.display_fields[0].qualifier_required='yes';assert.ok(validate(malformed,[],today).errors.some(e=>e.includes('qualifier_required')));
+});

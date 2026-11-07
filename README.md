@@ -27,6 +27,8 @@ One copy, one category. Use 3–5 decisive, comparable filters. Keep manufacture
 
 Read [the method](docs/method.md), [data rules](docs/data-rules.md) and [prompt guide](docs/prompts-guide.md). The checker validates records and arithmetic, not the truth of the sources. It never fetches web pages.
 
+The probe step removed the luggage size-fit filter—an example of the method cutting a filter the data cannot support.
+
 ## Provided as-is
 
 [MIT license](LICENSE), no warranty, no support. Issues are off. Each copy’s data is its owner’s responsibility. A passing check does not certify a product’s suitability, compatibility or safety.

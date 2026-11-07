@@ -130,7 +130,8 @@
         "H",
         "W",
         "D"
-      ]
+      ],
+      "qualifier_required": true
     }
   ],
   "explainer": {

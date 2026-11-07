@@ -18,7 +18,9 @@
         "quote": "Overall Dimensions (includes wheels and carry handles):\nH: 22 in. W: 14 in. D: 9 in.",
         "source_label": "Overall Dimensions (includes wheels and carry handles):",
         "checked": "2026-11-07",
-        "note": "Unexpanded baseline; expansion separately adds depth."
+        "note": "Unexpanded baseline; expansion separately adds depth.",
+        "qualifier_url": "https://travelpro.com/products/crew%E2%84%A2-classic-compact-carry-on-expandable-spinner",
+        "qualifier_quote": "Overall Dimensions (includes wheels and carry handles):"
       },
       "weight": {
         "value": 6.8,
@@ -68,7 +70,9 @@
         "quote": "Overall Dimensions (includes wheels and carry handles)\nH: 23 in. W: 14.5 in. D: 9 in.",
         "source_label": "Overall Dimensions (includes wheels and carry handles)",
         "checked": "2026-11-07",
-        "note": "Unexpanded baseline; expansion separately adds depth."
+        "note": "Unexpanded baseline; expansion separately adds depth.",
+        "qualifier_url": "https://travelpro.com/products/maxlite%C2%AE-5-21-expandable-carry-on-spinner",
+        "qualifier_quote": "Overall Dimensions (includes wheels and carry handles)"
       },
       "weight": {
         "value": 5.4,
@@ -118,7 +122,9 @@
         "quote": "Exterior measurements 22\" x 14.4\" x 9.1\"",
         "source_label": "Exterior measurements",
         "checked": "2026-11-07",
-        "note": "Page explicitly includes handles and wheels, but FAQ gives conflicting exterior dimensions 21.7 × 14.4 × 9 inches. Exclude from matching."
+        "note": "FAQ and specification block give conflicting exterior dimensions. Hidden until resolved.",
+        "qualifier_url": "https://www.awaytravel.com/products/carry-on-jet-black",
+        "qualifier_quote": "Measurements include handles and wheels."
       },
       "weight": {
         "value": 7.5,
@@ -169,7 +175,9 @@
         "quote": "Dimensions (Exterior): 22 x 14 x 9 - 11.5 in",
         "source_label": "Dimensions (Exterior):",
         "checked": "2026-11-07",
-        "note": "Unexpanded lower depth endpoint. Manufacturer UK page for identical SKU BLU122CX-4 explicitly includes wheels & handles: https://briggs-riley.co.uk/products/essential-56cm-2-wheel-expandable-carry-on-navy"
+        "note": "Unexpanded lower depth endpoint; corroboration matches SKU BLU122CX-4.",
+        "qualifier_url": "https://briggs-riley.co.uk/products/essential-56cm-2-wheel-expandable-carry-on-navy",
+        "qualifier_quote": "Exterior Dimensions\n(includes wheels & handles)"
       },
       "weight": {
         "value": 9.7,
@@ -265,7 +273,9 @@
         "quote": "OVERALL\n\n(INCLUDES WHEELS AND CARRY HANDLES):\n\nH: 23.5 in. W: 14.5 in. D: 9 in.",
         "source_label": "OVERALL",
         "checked": "2026-11-07",
-        "note": "Unexpanded baseline; zippered expansion separately increases depth."
+        "note": "Unexpanded baseline; zippered expansion separately increases depth.",
+        "qualifier_url": "https://travelpro.com/products/platinum%C2%AE-elite-21-expandable-carry-on-spinner",
+        "qualifier_quote": "OVERALL"
       },
       "weight": {
         "value": 7.8,
@@ -315,7 +325,9 @@
         "quote": "Overall (includes wheels and carry handles):\nH: 23 in. W: 14.5 in. D:9 in.",
         "source_label": "Overall (includes wheels and carry handles):",
         "checked": "2026-11-07",
-        "note": "Unexpanded baseline; zippered expansion separately increases depth."
+        "note": "Unexpanded baseline; zippered expansion separately increases depth.",
+        "qualifier_url": "https://travelpro.com/products/maxlite%C2%AE-5-22-expandable-carry-on-rollaboard%C2%AE",
+        "qualifier_quote": "Overall (includes wheels and carry handles):"
       },
       "weight": {
         "value": 5.4,
@@ -365,7 +377,9 @@
         "quote": "Overall Dimensions (includes wheels and carry handles):\n\nH: 23 in. W: 14.5 in. D: 9.5 in.",
         "source_label": "Overall Dimensions (includes wheels and carry handles):",
         "checked": "2026-11-07",
-        "note": "Unexpanded baseline; zippered expansion separately increases depth."
+        "note": "Unexpanded baseline; zippered expansion separately increases depth.",
+        "qualifier_url": "https://travelpro.com/products/maxlite%C2%AE-air-v2-carry-on-hardside-spinner",
+        "qualifier_quote": "Overall Dimensions (includes wheels and carry handles):"
       },
       "weight": {
         "value": 6.7,
@@ -416,7 +430,9 @@
         "quote": "Exterior measurements 23\" x 15.4\" x 9.4\"",
         "source_label": "Exterior measurements",
         "checked": "2026-11-07",
-        "note": "This product’s specification block conflicts with the dimensions for this model in the manufacturer’s Carry-On FAQ. Hidden until resolved. Cross-check: https://www.awaytravel.com/products/carry-on-jet-black"
+        "note": "This product’s specification block conflicts with the dimensions for this model in the manufacturer’s Carry-On FAQ. Hidden until resolved. Cross-check: https://www.awaytravel.com/products/carry-on-jet-black",
+        "qualifier_url": "https://www.awaytravel.com/products/bigger-carry-on-jet-black",
+        "qualifier_quote": "Measurements include handles and wheels."
       },
       "weight": {
         "value": 7.9,
@@ -466,7 +482,9 @@
         "quote": "Exterior measurements 22\" x 14.4\" x 9.1\"",
         "source_label": "Exterior measurements",
         "checked": "2026-11-07",
-        "note": "Manufacturer explicitly includes wheels and handles. Unexpanded baseline; expansion is stated separately."
+        "note": "Unexpanded baseline; expansion is stated separately.",
+        "qualifier_url": "https://www.awaytravel.com/products/carry-on-flex-jet-black",
+        "qualifier_quote": "Measurements include handles and wheels."
       },
       "weight": {
         "value": 7.9,
@@ -516,7 +534,9 @@
         "quote": "Exterior measurements 22.2\" H x 14.4\" W x 9.1\" L",
         "source_label": "Exterior measurements",
         "checked": "2026-11-07",
-        "note": "Manufacturer explicitly includes wheels and handles. Unexpanded baseline; expansion is stated separately."
+        "note": "Unexpanded baseline; expansion is stated separately.",
+        "qualifier_url": "https://www.awaytravel.com/products/softside-carry-on-navy-blue",
+        "qualifier_quote": "Measurements include wheels and handles."
       },
       "weight": {
         "value": 8.8,
@@ -566,7 +586,9 @@
         "quote": "Dimensions (Exterior): 22 x 14 x 9 - 11.5 in",
         "source_label": "Dimensions (Exterior):",
         "checked": "2026-11-07",
-        "note": "Unexpanded lower endpoint of manufacturer's depth range. UK manufacturer page establishes wheels/handles inclusion for same SKU BLU122CXSP-4: https://briggs-riley.co.uk/products/essential-carry-on-spinner"
+        "note": "Unexpanded lower depth endpoint; corroboration matches SKU BLU122CXSP-4.",
+        "qualifier_url": "https://briggs-riley.co.uk/products/essential-carry-on-spinner",
+        "qualifier_quote": "Exterior Dimensions\n(includes wheels & handles)"
       },
       "weight": {
         "value": 10,
@@ -616,7 +638,9 @@
         "quote": "Dimensions (Exterior): 21 x 15 x 9 - 11.5 in",
         "source_label": "Dimensions (Exterior):",
         "checked": "2026-11-07",
-        "note": "Unexpanded lower endpoint of manufacturer's depth range. UK manufacturer page establishes wheels/handles inclusion for same SKU BLU121CXSPW-7: https://briggs-riley.co.uk/products/global-carry-on-spinner"
+        "note": "Unexpanded lower depth endpoint; corroboration matches the available US Olive variant SKU BLU121CXSPW-7, not the US default color.",
+        "qualifier_url": "https://briggs-riley.co.uk/products/global-carry-on-spinner",
+        "qualifier_quote": "Exterior Dimensions\n(includes wheels & handles)"
       },
       "weight": {
         "value": 9.9,

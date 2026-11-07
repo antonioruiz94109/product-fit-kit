@@ -30,3 +30,11 @@ When a page labels a value, copy the **label and value together**, preserving th
 Every valued record declares `source_label`: the exact label appearing in the quote, or `null` if the page truly has none (such as an unlabeled store price). The checker requires a declared label to occur in the quote. It cannot determine whether a page has a label because it does not fetch pages; extraction and independent verification must check that. Missing-value records have no quote and do not require source_label. Converted/Calculated quotes must also retain the labels for the original measurement or inputs. The verification prompt checks label presence and meaning against the live page.
 
 Benchmarks compare unrounded original measurements when a value is Converted; display rounding never turns an oversized product into a match. If the source state is unsuitable, the computed card field says “Cannot determine” and explains the source state. A conflicting source hides its benchmark as well as the underlying field. These are computed display behaviors, not additional data states.
+
+## Evidence for qualifiers
+
+Optional `qualifier_quote` and `qualifier_url` hold a separate verbatim excerpt supporting a field-label qualifier, such as “with wheels and handles.” Supply both together. The qualifier URL must satisfy the product brand’s domain rules; dealer pages are allowed for price only. It can be the same page as the numeric quote or a matching-model manufacturer page in another allowed domain. Keep model/variant context in the note, not the evidence itself.
+
+A config field can set `qualifier_required: true`. Luggage `size` does so: every valued size record, including a hidden Conflicting record, needs both fields. Not published and Not yet verified records have null values and may omit the pair, since they assert no qualified measurement. Any supplied pair is still validated. A missing qualifier must not be invented to make validation pass. The site shows the qualifier quote and link inside the field’s expandable source details.
+
+The publish check enforces presence, nonempty text and allowed domains. It does not fetch the qualifier page or establish semantic truth; extraction and independent verification must do that.

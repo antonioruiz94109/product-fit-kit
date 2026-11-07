@@ -12,7 +12,7 @@ Independent review subsequently found a conflicting weight on Away The Carry-On.
 
 ## Inventory and evidence
 
-Each linked manufacturer page supplied the product record. Exact labeled quotes and check dates are in [data.json](data.json). Unexpanded dimensions use H × W × D and require a confirmed wheels/handles definition. They are never used as an airline-fit promise.
+Each linked manufacturer page supplied the product record. Exact labeled quotes and check dates are in [data.json](data.json). Every valued size record also carries `qualifier_quote` and `qualifier_url` supporting wheels/handles inclusion; that evidence is shown in its expandable source details. Null unverified measurements do not assert this qualifier. Unexpanded dimensions use H × W × D and require a confirmed wheels/handles definition. They are never used as an airline-fit promise.
 
 | Manufacturer / model | Overall dimensions | Listed weight |
 | --- | --- | --- |
