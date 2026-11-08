@@ -1,0 +1,568 @@
+[
+  {
+    "id": "topo-phantom-4",
+    "brand": "Topo Athletic",
+    "model": "Phantom 4",
+    "product_url": "https://www.topoathletic.com/mens-phantom-4",
+    "checked": "2026-11-06",
+    "fields": {
+      "intended_use": {
+        "value": "Daily Running, Walking",
+        "unit": "",
+        "state": "Published",
+        "source_url": "https://www.topoathletic.com/mens-phantom-4",
+        "quote": "Best For:Daily Running, Walking",
+        "checked": "2026-11-06",
+        "source_label": "Best For:"
+      },
+      "drop": {
+        "value": 5,
+        "unit": "mm",
+        "state": "Published",
+        "source_url": "https://www.topoathletic.com/mens-phantom-4",
+        "quote": "Heel to Toe Drop:5 mm",
+        "checked": "2026-11-06",
+        "source_label": "Heel to Toe Drop:"
+      },
+      "weight": {
+        "value": 9.3,
+        "unit": "oz",
+        "state": "Published",
+        "source_url": "https://www.topoathletic.com/mens-phantom-4",
+        "quote": "Weight:9.3 OZ (M9)",
+        "checked": "2026-11-06",
+        "note": "Men's US 9.",
+        "source_label": "Weight:"
+      },
+      "stack": {
+        "value": "35 mm (heel) x 30 mm (forefoot)",
+        "unit": "",
+        "state": "Published",
+        "source_url": "https://www.topoathletic.com/mens-phantom-4",
+        "quote": "Stack Height:35 mm (heel) x 30 mm (forefoot)",
+        "checked": "2026-11-06",
+        "source_label": "Stack Height:"
+      },
+      "price": {
+        "value": 150,
+        "unit": "USD",
+        "state": "Published",
+        "source_url": "https://www.topoathletic.com/mens-phantom-4",
+        "quote": "$150.00",
+        "checked": "2026-11-06",
+        "price_kind": "manufacturer",
+        "source_label": null
+      }
+    }
+  },
+  {
+    "id": "topo-cyclone-3",
+    "brand": "Topo Athletic",
+    "model": "Cyclone 3",
+    "product_url": "https://www.topoathletic.com/mens-cyclone-3",
+    "checked": "2026-11-06",
+    "fields": {
+      "intended_use": {
+        "value": "Tempo Runs, Race",
+        "unit": "",
+        "state": "Published",
+        "source_url": "https://www.topoathletic.com/mens-cyclone-3",
+        "quote": "Best For:Tempo Runs, Race",
+        "checked": "2026-11-06",
+        "source_label": "Best For:"
+      },
+      "drop": {
+        "value": 5,
+        "unit": "mm",
+        "state": "Published",
+        "source_url": "https://www.topoathletic.com/mens-cyclone-3",
+        "quote": "Heel to Toe Drop:5 mm",
+        "checked": "2026-11-06",
+        "source_label": "Heel to Toe Drop:"
+      },
+      "weight": {
+        "value": 6.9,
+        "unit": "oz",
+        "state": "Published",
+        "source_url": "https://www.topoathletic.com/mens-cyclone-3",
+        "quote": "Weight:6.9oz (M9)",
+        "checked": "2026-11-06",
+        "note": "Men's US 9.",
+        "source_label": "Weight:"
+      },
+      "stack": {
+        "value": "28 mm (heel) x 23 mm (forefoot)",
+        "unit": "",
+        "state": "Published",
+        "source_url": "https://www.topoathletic.com/mens-cyclone-3",
+        "quote": "Stack Height:28 mm (heel) x 23 mm (forefoot)",
+        "checked": "2026-11-06",
+        "source_label": "Stack Height:"
+      },
+      "price": {
+        "value": 155,
+        "unit": "USD",
+        "state": "Published",
+        "source_url": "https://www.topoathletic.com/mens-cyclone-3",
+        "quote": "$155.00",
+        "checked": "2026-11-06",
+        "price_kind": "manufacturer",
+        "source_label": null
+      }
+    }
+  },
+  {
+    "id": "topo-pursuit-3-men",
+    "brand": "Topo Athletic",
+    "model": "Pursuit 3",
+    "product_url": "https://www.topoathletic.com/mens-pursuit-3",
+    "checked": "2026-11-06",
+    "fields": {
+      "intended_use": {
+        "value": "Trail Running, Hiking",
+        "unit": "",
+        "state": "Published",
+        "source_url": "https://www.topoathletic.com/mens-pursuit-3",
+        "quote": "Best For:Trail Running, Hiking",
+        "checked": "2026-11-06",
+        "source_label": "Best For:"
+      },
+      "drop": {
+        "value": 0,
+        "unit": "mm",
+        "state": "Published",
+        "source_url": "https://www.topoathletic.com/mens-pursuit-3",
+        "quote": "Heel to Toe Drop:0 mm",
+        "checked": "2026-11-06",
+        "source_label": "Heel to Toe Drop:"
+      },
+      "weight": {
+        "value": 10.6,
+        "unit": "oz",
+        "state": "Published",
+        "source_url": "https://www.topoathletic.com/mens-pursuit-3",
+        "quote": "Weight:10.6 oz (M9)",
+        "checked": "2026-11-06",
+        "note": "Men's US 9.",
+        "source_label": "Weight:"
+      },
+      "stack": {
+        "value": "28 mm (0-drop)",
+        "unit": "",
+        "state": "Published",
+        "source_url": "https://www.topoathletic.com/mens-pursuit-3",
+        "quote": "Stack Height:28 mm (0-drop)",
+        "checked": "2026-11-06",
+        "source_label": "Stack Height:"
+      },
+      "price": {
+        "value": 155,
+        "unit": "USD",
+        "state": "Published",
+        "source_url": "https://www.topoathletic.com/mens-pursuit-3",
+        "quote": "$155.00",
+        "checked": "2026-11-06",
+        "price_kind": "manufacturer",
+        "source_label": null
+      }
+    }
+  },
+  {
+    "id": "nike-vomero-18",
+    "brand": "Nike",
+    "model": "Vomero 18",
+    "product_url": "https://www.nike.com/t/vomero-18-mens-road-running-shoes-NzWnvcC8/HM6803-015",
+    "checked": "2026-11-06",
+    "fields": {
+      "intended_use": {
+        "value": "Road Running",
+        "unit": "",
+        "state": "Published",
+        "source_url": "https://www.nike.com/t/vomero-18-mens-road-running-shoes-NzWnvcC8/HM6803-015",
+        "quote": "Engineered For\n\nRoad Running",
+        "checked": "2026-11-06",
+        "source_label": "Engineered For"
+      },
+      "drop": {
+        "value": 10,
+        "unit": "mm",
+        "state": "Published",
+        "source_url": "https://www.nike.com/t/vomero-18-mens-road-running-shoes-NzWnvcC8/HM6803-015",
+        "quote": "Heel-to-toe drop: 10mm",
+        "checked": "2026-11-06",
+        "source_label": "Heel-to-toe drop:"
+      },
+      "weight": {
+        "value": 11.5,
+        "unit": "oz",
+        "state": "Published",
+        "source_url": "https://www.nike.com/t/vomero-18-mens-road-running-shoes-NzWnvcC8/HM6803-015",
+        "quote": "Weight: Approx. 325g/11.5oz",
+        "checked": "2026-11-06",
+        "note": "Approximate manufacturer-listed weight; men's US 10.",
+        "source_label": "Weight:"
+      },
+      "stack": {
+        "value": "36mm in the forefoot and 46mm in the heel",
+        "unit": "",
+        "state": "Published",
+        "source_url": "https://www.nike.com/t/vomero-18-mens-road-running-shoes-NzWnvcC8/HM6803-015",
+        "quote": "stack height of 36mm in the forefoot and 46mm in the heel",
+        "checked": "2026-11-06",
+        "source_label": null
+      },
+      "price": {
+        "value": 87.97,
+        "unit": "USD",
+        "state": "Published",
+        "source_url": "https://www.nike.com/t/vomero-18-mens-road-running-shoes-NzWnvcC8/HM6803-015",
+        "quote": "$87.97",
+        "checked": "2026-11-06",
+        "note": "Sale for Grey Fog/Off White/Work Blue/Dark Obsidian, style HM6803-015; differs from copied $155 price.",
+        "price_kind": "manufacturer",
+        "source_label": null
+      }
+    }
+  },
+  {
+    "id": "nike-vaporfly-4-men",
+    "brand": "Nike",
+    "model": "Vaporfly 4",
+    "product_url": "https://www.nike.com/t/vaporfly-4-mens-road-racing-shoes-HK05JWOf/HF6414-106",
+    "checked": "2026-11-06",
+    "fields": {
+      "intended_use": {
+        "value": "Road Racing",
+        "unit": "",
+        "state": "Published",
+        "source_url": "https://www.nike.com/t/vaporfly-4-mens-road-racing-shoes-HK05JWOf/HF6414-106",
+        "quote": "Engineered For\n\nRoad Racing",
+        "checked": "2026-11-06",
+        "source_label": "Engineered For"
+      },
+      "drop": {
+        "value": 6,
+        "unit": "mm",
+        "state": "Published",
+        "source_url": "https://www.nike.com/t/vaporfly-4-mens-road-racing-shoes-HK05JWOf/HF6414-106",
+        "quote": "Heel-to-toe drop: 6mm",
+        "checked": "2026-11-06",
+        "source_label": "Heel-to-toe drop:"
+      },
+      "weight": {
+        "value": 6.7,
+        "unit": "oz",
+        "state": "Published",
+        "source_url": "https://www.nike.com/t/vaporfly-4-mens-road-racing-shoes-HK05JWOf/HF6414-106",
+        "quote": "Weight: Approx. 190g/6.7oz (Men's US 10)",
+        "checked": "2026-11-06",
+        "note": "Approximate manufacturer-listed weight; men's US 10.",
+        "source_label": "Weight:"
+      },
+      "stack": {
+        "value": null,
+        "unit": "",
+        "state": "Not published",
+        "source_url": "https://www.nike.com/t/vaporfly-4-mens-road-racing-shoes-HK05JWOf/HF6414-106",
+        "quote": "",
+        "checked": "2026-11-06",
+        "note": "Checked product page does not publish total heel and forefoot stack heights.",
+        "source_label": null
+      },
+      "price": {
+        "value": 270,
+        "unit": "USD",
+        "state": "Published",
+        "source_url": "https://www.nike.com/t/vaporfly-4-mens-road-racing-shoes-HK05JWOf/HF6414-106",
+        "quote": "$270",
+        "checked": "2026-11-06",
+        "price_kind": "manufacturer",
+        "source_label": null
+      }
+    }
+  },
+  {
+    "id": "new-balance-rebel-v5",
+    "brand": "New Balance",
+    "model": "FuelCell Rebel v5",
+    "product_url": "https://www.newbalance.com/pd/fuelcell-rebel-v5/MFCXLO5-D-045.html",
+    "checked": "2026-11-06",
+    "fields": {
+      "intended_use": {
+        "value": "Everyday Running, Quick Runs",
+        "unit": "",
+        "state": "Published",
+        "source_url": "https://www.newbalance.com/pd/fuelcell-rebel-v5/MFCXLO5-D-045.html",
+        "quote": "Best for Everyday Running, Quick Runs",
+        "checked": "2026-11-06",
+        "source_label": "Best for"
+      },
+      "drop": {
+        "value": 6,
+        "unit": "mm",
+        "state": "Published",
+        "source_url": "https://www.newbalance.com/pd/fuelcell-rebel-v5/MFCXLO5-D-045.html",
+        "quote": "Heel/toe drop 6 Mm Drop**",
+        "checked": "2026-11-06",
+        "source_label": "Heel/toe drop"
+      },
+      "weight": {
+        "value": 7.9,
+        "unit": "oz",
+        "state": "Published",
+        "source_url": "https://www.newbalance.com/pd/fuelcell-rebel-v5/MFCXLO5-D-045.html",
+        "quote": "Weight 223 grams (7.9 oz)",
+        "checked": "2026-11-06",
+        "note": "Reference shoe size is not specified.",
+        "source_label": "Weight"
+      },
+      "stack": {
+        "value": null,
+        "unit": "",
+        "state": "Not published",
+        "source_url": "https://www.newbalance.com/pd/fuelcell-rebel-v5/MFCXLO5-D-045.html",
+        "quote": "",
+        "checked": "2026-11-06",
+        "note": "Checked page does not publish a complete heel/forefoot pair. Its 6mm footnote is labeled as heel stack despite the main spec identifying 6mm as drop; no total stack inferred.",
+        "source_label": null
+      },
+      "price": {
+        "value": 144.99,
+        "unit": "USD",
+        "state": "Published",
+        "source_url": "https://www.newbalance.com/pd/fuelcell-rebel-v5/MFCXLO5-D-045.html",
+        "quote": "$144.99",
+        "checked": "2026-11-06",
+        "note": "Page says 'from'; confirm selected size/color before purchase.",
+        "price_kind": "manufacturer",
+        "source_label": null
+      }
+    }
+  },
+  {
+    "id": "saucony-xodus-ultra-4-men",
+    "brand": "Saucony",
+    "model": "Xodus Ultra 4",
+    "product_url": "https://www.saucony.com/en/xodus-ultra-4/60330M.html",
+    "checked": "2026-11-06",
+    "fields": {
+      "intended_use": {
+        "value": "Trail run/Hiking",
+        "unit": "",
+        "state": "Published",
+        "source_url": "https://www.saucony.com/en/xodus-ultra-4/60330M.html",
+        "quote": "Made for Trail run/Hiking",
+        "checked": "2026-11-06",
+        "source_label": "Made for"
+      },
+      "drop": {
+        "value": 6,
+        "unit": "mm",
+        "state": "Published",
+        "source_url": "https://www.saucony.com/en/xodus-ultra-4/60330M.html",
+        "quote": "Offset:\n    6mm (36/30mm)",
+        "checked": "2026-11-06",
+        "source_label": "Offset:"
+      },
+      "weight": {
+        "value": 10.9,
+        "unit": "oz",
+        "state": "Published",
+        "source_url": "https://www.saucony.com/en/xodus-ultra-4/60330M.html",
+        "quote": "Weight:\n    10.9oz (309g)",
+        "checked": "2026-11-06",
+        "note": "Reference shoe size is not specified.",
+        "source_label": "Weight:"
+      },
+      "stack": {
+        "value": "36/30mm",
+        "unit": "",
+        "state": "Published",
+        "source_url": "https://www.saucony.com/en/xodus-ultra-4/60330M.html",
+        "quote": "Offset:\n    6mm (36/30mm)",
+        "checked": "2026-11-06",
+        "source_label": "Offset:"
+      },
+      "price": {
+        "value": 170,
+        "unit": "USD",
+        "state": "Published",
+        "source_url": "https://www.saucony.com/en/xodus-ultra-4/60330M.html",
+        "quote": "$170.00",
+        "checked": "2026-11-06",
+        "price_kind": "manufacturer",
+        "source_label": null
+      }
+    }
+  },
+  {
+    "id": "hoka-bondi-9-men",
+    "brand": "HOKA",
+    "model": "Bondi 9",
+    "product_url": "https://www.hoka.com/en/us/mens-everyday-running-shoes/bondi-9/1162011.html",
+    "checked": "2026-11-06",
+    "fields": {
+      "intended_use": {
+        "value": "Everyday Run",
+        "unit": "",
+        "state": "Published",
+        "source_url": "https://www.hoka.com/en/us/mens-everyday-running-shoes/bondi-9/1162011.html",
+        "quote": "Best For:\n\nEveryday Run",
+        "checked": "2026-11-06",
+        "source_label": "Best For:"
+      },
+      "drop": {
+        "value": 5,
+        "unit": "mm",
+        "state": "Published",
+        "source_url": "https://www.hoka.com/en/us/mens-everyday-running-shoes/bondi-9/1162011.html",
+        "quote": "Heel-To-Toe Drop\n\n5.00 mm",
+        "checked": "2026-11-06",
+        "source_label": "Heel-To-Toe Drop"
+      },
+      "weight": {
+        "value": 10.5,
+        "unit": "oz",
+        "state": "Published",
+        "source_url": "https://www.hoka.com/en/us/mens-everyday-running-shoes/bondi-9/1162011.html",
+        "quote": "Weight\n\n10.50 oz",
+        "checked": "2026-11-06",
+        "note": "Reference shoe size is not specified.",
+        "source_label": "Weight"
+      },
+      "stack": {
+        "value": null,
+        "unit": "",
+        "state": "Not published",
+        "source_url": "https://www.hoka.com/en/us/mens-everyday-running-shoes/bondi-9/1162011.html",
+        "quote": "",
+        "checked": "2026-11-06",
+        "note": "Checked product page states an increase in stack height but does not publish total heel and forefoot heights.",
+        "source_label": null
+      },
+      "price": {
+        "value": null,
+        "unit": "USD",
+        "state": "Not yet verified",
+        "source_url": "https://www.hoka.com/en/us/mens-everyday-running-shoes/bondi-9/1162011.html",
+        "quote": "",
+        "checked": "2026-11-06",
+        "note": "Page shows a $140–$175 color-dependent price range, so an exact selected offer price was not verified.",
+        "source_label": null
+      }
+    }
+  },
+  {
+    "id": "brooks-ghost-18-men",
+    "brand": "Brooks",
+    "model": "Ghost 18",
+    "product_url": "https://www.brooksrunning.com/en_us/mens/shoes/road-running-shoes/ghost-18/110493.html",
+    "checked": "2026-11-06",
+    "fields": {
+      "intended_use": {
+        "value": "Road running, Daily runs, Walking, Balanced support",
+        "unit": "",
+        "state": "Published",
+        "source_url": "https://www.brooksrunning.com/en_us/mens/shoes/road-running-shoes/ghost-18/110493.html",
+        "quote": "Best for\n\nRoad running, Daily runs, Walking, Balanced support",
+        "checked": "2026-11-06",
+        "source_label": "Best for"
+      },
+      "drop": {
+        "value": 10,
+        "unit": "mm",
+        "state": "Published",
+        "source_url": "https://www.brooksrunning.com/en_us/mens/shoes/road-running-shoes/ghost-18/110493.html",
+        "quote": "Midsole drop\n\n10mm",
+        "checked": "2026-11-06",
+        "source_label": "Midsole drop"
+      },
+      "weight": {
+        "value": 10.2,
+        "unit": "oz",
+        "state": "Published",
+        "source_url": "https://www.brooksrunning.com/en_us/mens/shoes/road-running-shoes/ghost-18/110493.html",
+        "quote": "Weight\n\n10.2oz / 289.2g",
+        "checked": "2026-11-06",
+        "note": "Reference shoe size is not specified.",
+        "source_label": "Weight"
+      },
+      "stack": {
+        "value": null,
+        "unit": "",
+        "state": "Not published",
+        "source_url": "https://www.brooksrunning.com/en_us/mens/shoes/road-running-shoes/ghost-18/110493.html",
+        "quote": "",
+        "checked": "2026-11-06",
+        "note": "Checked product page does not publish total heel and forefoot stack heights.",
+        "source_label": null
+      },
+      "price": {
+        "value": 150,
+        "unit": "USD",
+        "state": "Published",
+        "source_url": "https://www.brooksrunning.com/en_us/mens/shoes/road-running-shoes/ghost-18/110493.html",
+        "quote": "$150.00",
+        "checked": "2026-11-06",
+        "price_kind": "manufacturer",
+        "source_label": null
+      }
+    }
+  },
+  {
+    "id": "topo-mtn-racer-4",
+    "brand": "Topo Athletic",
+    "model": "MTN Racer 4",
+    "product_url": "https://www.topoathletic.com/mens-mtn-racer-4",
+    "checked": "2026-11-06",
+    "fields": {
+      "intended_use": {
+        "value": "Trail Running, Race",
+        "unit": "",
+        "state": "Published",
+        "source_url": "https://www.topoathletic.com/mens-mtn-racer-4",
+        "quote": "Best For:Trail Running, Race",
+        "source_label": "Best For:",
+        "checked": "2026-11-06"
+      },
+      "drop": {
+        "value": 5,
+        "unit": "mm",
+        "state": "Published",
+        "source_url": "https://www.topoathletic.com/mens-mtn-racer-4",
+        "quote": "Heel to Toe Drop:5 mm",
+        "source_label": "Heel to Toe Drop:",
+        "checked": "2026-11-06"
+      },
+      "weight": {
+        "value": 10.4,
+        "unit": "oz",
+        "state": "Published",
+        "source_url": "https://www.topoathletic.com/mens-mtn-racer-4",
+        "quote": "Weight:10.4 OZ (M9)",
+        "source_label": "Weight:",
+        "checked": "2026-11-06",
+        "note": "Men's US 9."
+      },
+      "stack": {
+        "value": "33 mm (heel) x 28 mm (forefoot)",
+        "unit": "",
+        "state": "Published",
+        "source_url": "https://www.topoathletic.com/mens-mtn-racer-4",
+        "quote": "Stack Height:33 mm (heel) x 28 mm (forefoot)",
+        "source_label": "Stack Height:",
+        "checked": "2026-11-06"
+      },
+      "price": {
+        "value": 155,
+        "unit": "USD",
+        "state": "Published",
+        "source_url": "https://www.topoathletic.com/mens-mtn-racer-4",
+        "quote": "$155.00",
+        "source_label": null,
+        "checked": "2026-11-06",
+        "price_kind": "manufacturer"
+      }
+    }
+  }
+]

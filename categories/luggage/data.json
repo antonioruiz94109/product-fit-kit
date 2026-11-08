@@ -1,0 +1,767 @@
+[
+  {
+    "id": "travelpro-crew-classic-compact-spinner",
+    "brand": "Travelpro",
+    "model": "Crew Classic Compact Carry-On Spinner",
+    "product_url": "https://travelpro.com/products/crew%E2%84%A2-classic-compact-carry-on-expandable-spinner",
+    "checked": "2026-11-07",
+    "fields": {
+      "size": {
+        "value": [
+          22,
+          14,
+          9
+        ],
+        "unit": "in",
+        "state": "Published",
+        "source_url": "https://travelpro.com/products/crew%E2%84%A2-classic-compact-carry-on-expandable-spinner",
+        "quote": "Overall Dimensions (includes wheels and carry handles):\nH: 22 in. W: 14 in. D: 9 in.",
+        "source_label": "Overall Dimensions (includes wheels and carry handles):",
+        "checked": "2026-11-07",
+        "note": "Unexpanded baseline; expansion separately adds depth.",
+        "qualifier_url": "https://travelpro.com/products/crew%E2%84%A2-classic-compact-carry-on-expandable-spinner",
+        "qualifier_quote": "Overall Dimensions (includes wheels and carry handles):"
+      },
+      "weight": {
+        "value": 6.8,
+        "unit": "lb",
+        "state": "Published",
+        "source_url": "https://travelpro.com/products/crew%E2%84%A2-classic-compact-carry-on-expandable-spinner",
+        "quote": "Weight: 6.8 lbs.",
+        "source_label": "Weight:",
+        "checked": "2026-11-07"
+      },
+      "shell": {
+        "value": "High-density fabric",
+        "unit": "",
+        "state": "Published",
+        "source_url": "https://travelpro.com/products/crew%E2%84%A2-classic-compact-carry-on-expandable-spinner",
+        "quote": "High-density fabric",
+        "source_label": null,
+        "checked": "2026-11-07"
+      },
+      "wheels": {
+        "value": "spinner wheels",
+        "unit": "",
+        "state": "Published",
+        "source_url": "https://travelpro.com/products/crew%E2%84%A2-classic-compact-carry-on-expandable-spinner",
+        "quote": "spinner wheels",
+        "source_label": null,
+        "checked": "2026-11-07"
+      }
+    }
+  },
+  {
+    "id": "travelpro-maxlite-5-spinner",
+    "brand": "Travelpro",
+    "model": "Maxlite 5 Carry-On Spinner",
+    "product_url": "https://travelpro.com/products/maxlite%C2%AE-5-21-expandable-carry-on-spinner",
+    "checked": "2026-11-07",
+    "fields": {
+      "size": {
+        "value": [
+          23,
+          14.5,
+          9
+        ],
+        "unit": "in",
+        "state": "Published",
+        "source_url": "https://travelpro.com/products/maxlite%C2%AE-5-21-expandable-carry-on-spinner",
+        "quote": "Overall Dimensions (includes wheels and carry handles)\nH: 23 in. W: 14.5 in. D: 9 in.",
+        "source_label": "Overall Dimensions (includes wheels and carry handles)",
+        "checked": "2026-11-07",
+        "note": "Unexpanded baseline; expansion separately adds depth.",
+        "qualifier_url": "https://travelpro.com/products/maxlite%C2%AE-5-21-expandable-carry-on-spinner",
+        "qualifier_quote": "Overall Dimensions (includes wheels and carry handles)"
+      },
+      "weight": {
+        "value": 5.4,
+        "unit": "lb",
+        "state": "Published",
+        "source_url": "https://travelpro.com/products/maxlite%C2%AE-5-21-expandable-carry-on-spinner",
+        "quote": "Weight: 5.4 lbs.",
+        "source_label": "Weight:",
+        "checked": "2026-11-07"
+      },
+      "shell": {
+        "value": "soft-sided",
+        "unit": "",
+        "state": "Published",
+        "source_url": "https://travelpro.com/products/maxlite%C2%AE-5-21-expandable-carry-on-spinner",
+        "quote": "soft-sided",
+        "source_label": null,
+        "checked": "2026-11-07"
+      },
+      "wheels": {
+        "value": "360° 4-wheel spinners",
+        "unit": "",
+        "state": "Published",
+        "source_url": "https://travelpro.com/products/maxlite%C2%AE-5-21-expandable-carry-on-spinner",
+        "quote": "360° 4-wheel spinners",
+        "source_label": null,
+        "checked": "2026-11-07"
+      }
+    }
+  },
+  {
+    "id": "away-the-carry-on",
+    "brand": "Away",
+    "model": "The Carry-On",
+    "product_url": "https://www.awaytravel.com/products/carry-on-jet-black",
+    "checked": "2026-11-07",
+    "fields": {
+      "size": {
+        "value": [
+          22,
+          14.4,
+          9.1
+        ],
+        "unit": "in",
+        "state": "Conflicting",
+        "source_url": "https://www.awaytravel.com/products/carry-on-jet-black",
+        "quote": "Exterior measurements 22\" x 14.4\" x 9.1\"",
+        "source_label": "Exterior measurements",
+        "checked": "2026-11-07",
+        "note": "FAQ and specification block give conflicting exterior dimensions. Hidden until resolved.",
+        "qualifier_url": "https://www.awaytravel.com/products/carry-on-jet-black",
+        "qualifier_quote": "Measurements include handles and wheels."
+      },
+      "weight": {
+        "value": 7.5,
+        "unit": "lb",
+        "state": "Conflicting",
+        "source_url": "https://www.awaytravel.com/products/carry-on-jet-black",
+        "quote": "Weight 7.5 lbs",
+        "source_label": "Weight",
+        "checked": "2026-11-07",
+        "note": "The introduction and specification block on this manufacturer page state different weights. Hidden until the discrepancy is resolved."
+      },
+      "shell": {
+        "value": "100% polycarbonate shell",
+        "unit": "",
+        "state": "Published",
+        "source_url": "https://www.awaytravel.com/products/carry-on-jet-black",
+        "quote": "100% polycarbonate shell",
+        "source_label": null,
+        "checked": "2026-11-07"
+      },
+      "wheels": {
+        "value": "360 smooth-gliding wheels",
+        "unit": "",
+        "state": "Published",
+        "source_url": "https://www.awaytravel.com/products/carry-on-jet-black",
+        "quote": "360 smooth-gliding wheels",
+        "source_label": null,
+        "checked": "2026-11-07"
+      }
+    }
+  },
+  {
+    "id": "briggs-riley-essential-2-wheel",
+    "brand": "Briggs & Riley",
+    "model": "Essential 22\" 2-Wheel Expandable Carry-On",
+    "product_url": "https://www.briggs-riley.com/products/essential-2-wheel-carry-on",
+    "checked": "2026-11-07",
+    "fields": {
+      "size": {
+        "value": [
+          22,
+          14,
+          9
+        ],
+        "unit": "in",
+        "state": "Published",
+        "source_url": "https://www.briggs-riley.com/products/essential-2-wheel-carry-on",
+        "quote": "Dimensions (Exterior): 22 x 14 x 9 - 11.5 in",
+        "source_label": "Dimensions (Exterior):",
+        "checked": "2026-11-07",
+        "note": "Unexpanded lower depth endpoint; corroboration matches SKU BLU122CX-4.",
+        "qualifier_url": "https://briggs-riley.co.uk/products/essential-56cm-2-wheel-expandable-carry-on-navy",
+        "qualifier_quote": "Exterior Dimensions\n(includes wheels & handles)"
+      },
+      "weight": {
+        "value": 9.7,
+        "unit": "lb",
+        "state": "Published",
+        "source_url": "https://www.briggs-riley.com/products/essential-2-wheel-carry-on",
+        "quote": "Weight: 9.7 lbs",
+        "source_label": "Weight:",
+        "checked": "2026-11-07"
+      },
+      "shell": {
+        "value": "Premium Ultra-Durable Ballistic Nylon",
+        "unit": "",
+        "state": "Published",
+        "source_url": "https://www.briggs-riley.com/products/essential-2-wheel-carry-on",
+        "quote": "Materials: Premium Ultra-Durable Ballistic Nylon",
+        "source_label": "Materials:",
+        "checked": "2026-11-07"
+      },
+      "wheels": {
+        "value": "2 Wheels",
+        "unit": "",
+        "state": "Published",
+        "source_url": "https://www.briggs-riley.com/products/essential-2-wheel-carry-on",
+        "quote": "2 Wheels",
+        "source_label": null,
+        "checked": "2026-11-07"
+      }
+    }
+  },
+  {
+    "id": "samsonite-freeform-carry-on",
+    "brand": "Samsonite",
+    "model": "Freeform Carry-On Spinner",
+    "product_url": "https://shop.samsonite.com/luggage-carry-on-luggage/freeform-carry-on-spinner/78255XXXX.html?dwvar_78255XXXX_color=782554744",
+    "checked": "2026-11-07",
+    "fields": {
+      "size": {
+        "value": null,
+        "unit": "in",
+        "state": "Not yet verified",
+        "source_url": "https://shop.samsonite.com/luggage-carry-on-luggage/freeform-carry-on-spinner/78255XXXX.html?dwvar_78255XXXX_color=782554744",
+        "quote": "",
+        "source_label": null,
+        "checked": "2026-11-07",
+        "note": "Product page gives exterior dimensions but retrieved page does not establish wheel/handle inclusion. An official measurement definition could not be retrieved reliably. Numeric depth also appears rounded differently in separate sections. Exclude from matching."
+      },
+      "weight": {
+        "value": 6.5,
+        "unit": "lb",
+        "state": "Published",
+        "source_url": "https://shop.samsonite.com/luggage-carry-on-luggage/freeform-carry-on-spinner/78255XXXX.html?dwvar_78255XXXX_color=782554744",
+        "quote": "Weight: 6.5 lbs",
+        "source_label": "Weight:",
+        "checked": "2026-11-07"
+      },
+      "shell": {
+        "value": "Hardside (Polypro)",
+        "unit": "",
+        "state": "Published",
+        "source_url": "https://shop.samsonite.com/luggage-carry-on-luggage/freeform-carry-on-spinner/78255XXXX.html?dwvar_78255XXXX_color=782554744",
+        "quote": "Material\n\nHardside (Polypro)",
+        "source_label": "Material",
+        "checked": "2026-11-07"
+      },
+      "wheels": {
+        "value": "Spinner",
+        "unit": "",
+        "state": "Published",
+        "source_url": "https://shop.samsonite.com/luggage-carry-on-luggage/freeform-carry-on-spinner/78255XXXX.html?dwvar_78255XXXX_color=782554744",
+        "quote": "Freeform Carry-On Spinner",
+        "source_label": null,
+        "checked": "2026-11-07"
+      }
+    }
+  },
+  {
+    "id": "travelpro-platinum-elite-spinner",
+    "brand": "Travelpro",
+    "model": "Platinum Elite Carry-On Spinner",
+    "product_url": "https://travelpro.com/products/platinum%C2%AE-elite-21-expandable-carry-on-spinner",
+    "checked": "2026-11-07",
+    "fields": {
+      "size": {
+        "value": [
+          23.5,
+          14.5,
+          9
+        ],
+        "unit": "in",
+        "state": "Published",
+        "source_url": "https://travelpro.com/products/platinum%C2%AE-elite-21-expandable-carry-on-spinner",
+        "quote": "OVERALL\n\n(INCLUDES WHEELS AND CARRY HANDLES):\n\nH: 23.5 in. W: 14.5 in. D: 9 in.",
+        "source_label": "OVERALL",
+        "checked": "2026-11-07",
+        "note": "Unexpanded baseline; zippered expansion separately increases depth.",
+        "qualifier_url": "https://travelpro.com/products/platinum%C2%AE-elite-21-expandable-carry-on-spinner",
+        "qualifier_quote": "OVERALL"
+      },
+      "weight": {
+        "value": 7.8,
+        "unit": "lb",
+        "state": "Published",
+        "source_url": "https://travelpro.com/products/platinum%C2%AE-elite-21-expandable-carry-on-spinner",
+        "quote": "Weight: 7.8 lbs.",
+        "source_label": "Weight:",
+        "checked": "2026-11-07"
+      },
+      "shell": {
+        "value": "nylon fabric",
+        "unit": "",
+        "state": "Published",
+        "source_url": "https://travelpro.com/products/platinum%C2%AE-elite-21-expandable-carry-on-spinner",
+        "quote": "nylon fabric",
+        "source_label": null,
+        "checked": "2026-11-07"
+      },
+      "wheels": {
+        "value": "360° MagnaTrac® spinner wheels",
+        "unit": "",
+        "state": "Published",
+        "source_url": "https://travelpro.com/products/platinum%C2%AE-elite-21-expandable-carry-on-spinner",
+        "quote": "360° MagnaTrac® spinner wheels",
+        "source_label": null,
+        "checked": "2026-11-07"
+      }
+    }
+  },
+  {
+    "id": "travelpro-maxlite-5-rollaboard",
+    "brand": "Travelpro",
+    "model": "Maxlite 5 Carry-On Rollaboard",
+    "product_url": "https://travelpro.com/products/maxlite%C2%AE-5-22-expandable-carry-on-rollaboard%C2%AE",
+    "checked": "2026-11-07",
+    "fields": {
+      "size": {
+        "value": [
+          23,
+          14.5,
+          9
+        ],
+        "unit": "in",
+        "state": "Published",
+        "source_url": "https://travelpro.com/products/maxlite%C2%AE-5-22-expandable-carry-on-rollaboard%C2%AE",
+        "quote": "Overall (includes wheels and carry handles):\nH: 23 in. W: 14.5 in. D:9 in.",
+        "source_label": "Overall (includes wheels and carry handles):",
+        "checked": "2026-11-07",
+        "note": "Unexpanded baseline; zippered expansion separately increases depth.",
+        "qualifier_url": "https://travelpro.com/products/maxlite%C2%AE-5-22-expandable-carry-on-rollaboard%C2%AE",
+        "qualifier_quote": "Overall (includes wheels and carry handles):"
+      },
+      "weight": {
+        "value": 5.4,
+        "unit": "lb",
+        "state": "Published",
+        "source_url": "https://travelpro.com/products/maxlite%C2%AE-5-22-expandable-carry-on-rollaboard%C2%AE",
+        "quote": "Weight: 5.4 lbs.",
+        "source_label": "Weight:",
+        "checked": "2026-11-07"
+      },
+      "shell": {
+        "value": "Polyester fabric",
+        "unit": "",
+        "state": "Published",
+        "source_url": "https://travelpro.com/products/maxlite%C2%AE-5-22-expandable-carry-on-rollaboard%C2%AE",
+        "quote": "Polyester fabric",
+        "source_label": null,
+        "checked": "2026-11-07"
+      },
+      "wheels": {
+        "value": "2 high-performance ball bearing wheels",
+        "unit": "",
+        "state": "Published",
+        "source_url": "https://travelpro.com/products/maxlite%C2%AE-5-22-expandable-carry-on-rollaboard%C2%AE",
+        "quote": "2 high-performance ball bearing wheels",
+        "source_label": null,
+        "checked": "2026-11-07"
+      }
+    }
+  },
+  {
+    "id": "travelpro-maxlite-air-v2-spinner",
+    "brand": "Travelpro",
+    "model": "Maxlite Air V2 Carry-On Hardside Spinner",
+    "product_url": "https://travelpro.com/products/maxlite%C2%AE-air-v2-carry-on-hardside-spinner",
+    "checked": "2026-11-07",
+    "fields": {
+      "size": {
+        "value": [
+          23,
+          14.5,
+          9.5
+        ],
+        "unit": "in",
+        "state": "Published",
+        "source_url": "https://travelpro.com/products/maxlite%C2%AE-air-v2-carry-on-hardside-spinner",
+        "quote": "Overall Dimensions (includes wheels and carry handles):\n\nH: 23 in. W: 14.5 in. D: 9.5 in.",
+        "source_label": "Overall Dimensions (includes wheels and carry handles):",
+        "checked": "2026-11-07",
+        "note": "Unexpanded baseline; zippered expansion separately increases depth.",
+        "qualifier_url": "https://travelpro.com/products/maxlite%C2%AE-air-v2-carry-on-hardside-spinner",
+        "qualifier_quote": "Overall Dimensions (includes wheels and carry handles):"
+      },
+      "weight": {
+        "value": 6.7,
+        "unit": "lb",
+        "state": "Conflicting",
+        "source_url": "https://travelpro.com/products/maxlite%C2%AE-air-v2-carry-on-hardside-spinner",
+        "quote": "Weight: 6.7 lbs.",
+        "source_label": "Weight:",
+        "checked": "2026-11-07",
+        "note": "Exact specification and size-comparison table give 6.7 lb, but the same page’s marketing introduction describes a 6-lb. spinner. No rounding interpretation assumed; excluded pending clarification."
+      },
+      "shell": {
+        "value": "polycarbonate shell",
+        "unit": "",
+        "state": "Published",
+        "source_url": "https://travelpro.com/products/maxlite%C2%AE-air-v2-carry-on-hardside-spinner",
+        "quote": "polycarbonate shell",
+        "source_label": null,
+        "checked": "2026-11-07"
+      },
+      "wheels": {
+        "value": "8 Spinner wheels",
+        "unit": "",
+        "state": "Published",
+        "source_url": "https://travelpro.com/products/maxlite%C2%AE-air-v2-carry-on-hardside-spinner",
+        "quote": "8 Spinner wheels",
+        "source_label": null,
+        "checked": "2026-11-07"
+      }
+    }
+  },
+  {
+    "id": "away-bigger-carry-on",
+    "brand": "Away",
+    "model": "The Bigger Carry-On",
+    "product_url": "https://www.awaytravel.com/products/bigger-carry-on-jet-black",
+    "checked": "2026-11-07",
+    "fields": {
+      "size": {
+        "value": [
+          23,
+          15.4,
+          9.4
+        ],
+        "unit": "in",
+        "state": "Conflicting",
+        "source_url": "https://www.awaytravel.com/products/bigger-carry-on-jet-black",
+        "quote": "Exterior measurements 23\" x 15.4\" x 9.4\"",
+        "source_label": "Exterior measurements",
+        "checked": "2026-11-07",
+        "note": "This product’s specification block conflicts with the dimensions for this model in the manufacturer’s Carry-On FAQ. Hidden until resolved. Cross-check: https://www.awaytravel.com/products/carry-on-jet-black",
+        "qualifier_url": "https://www.awaytravel.com/products/bigger-carry-on-jet-black",
+        "qualifier_quote": "Measurements include handles and wheels."
+      },
+      "weight": {
+        "value": 7.9,
+        "unit": "lb",
+        "state": "Published",
+        "source_url": "https://www.awaytravel.com/products/bigger-carry-on-jet-black",
+        "quote": "Weight 7.9 lbs",
+        "source_label": "Weight",
+        "checked": "2026-11-07"
+      },
+      "shell": {
+        "value": "100% polycarbonate shell",
+        "unit": "",
+        "state": "Published",
+        "source_url": "https://www.awaytravel.com/products/bigger-carry-on-jet-black",
+        "quote": "100% polycarbonate shell",
+        "source_label": null,
+        "checked": "2026-11-07"
+      },
+      "wheels": {
+        "value": "360° smooth-gliding wheels",
+        "unit": "",
+        "state": "Published",
+        "source_url": "https://www.awaytravel.com/products/bigger-carry-on-jet-black",
+        "quote": "360° smooth-gliding wheels",
+        "source_label": null,
+        "checked": "2026-11-07"
+      }
+    }
+  },
+  {
+    "id": "away-carry-on-flex",
+    "brand": "Away",
+    "model": "The Carry-On Flex",
+    "product_url": "https://www.awaytravel.com/products/carry-on-flex-jet-black",
+    "checked": "2026-11-07",
+    "fields": {
+      "size": {
+        "value": [
+          22,
+          14.4,
+          9.1
+        ],
+        "unit": "in",
+        "state": "Published",
+        "source_url": "https://www.awaytravel.com/products/carry-on-flex-jet-black",
+        "quote": "Exterior measurements 22\" x 14.4\" x 9.1\"",
+        "source_label": "Exterior measurements",
+        "checked": "2026-11-07",
+        "note": "Unexpanded baseline; expansion is stated separately.",
+        "qualifier_url": "https://www.awaytravel.com/products/carry-on-flex-jet-black",
+        "qualifier_quote": "Measurements include handles and wheels."
+      },
+      "weight": {
+        "value": 7.9,
+        "unit": "lb",
+        "state": "Published",
+        "source_url": "https://www.awaytravel.com/products/carry-on-flex-jet-black",
+        "quote": "Weight 7.9 lbs",
+        "source_label": "Weight",
+        "checked": "2026-11-07"
+      },
+      "shell": {
+        "value": "100% polycarbonate shell",
+        "unit": "",
+        "state": "Published",
+        "source_url": "https://www.awaytravel.com/products/carry-on-flex-jet-black",
+        "quote": "100% polycarbonate shell",
+        "source_label": null,
+        "checked": "2026-11-07"
+      },
+      "wheels": {
+        "value": "360° spinner wheels",
+        "unit": "",
+        "state": "Published",
+        "source_url": "https://www.awaytravel.com/products/carry-on-flex-jet-black",
+        "quote": "360° spinner wheels",
+        "source_label": null,
+        "checked": "2026-11-07"
+      }
+    }
+  },
+  {
+    "id": "away-softside-carry-on",
+    "brand": "Away",
+    "model": "Softside Carry-On",
+    "product_url": "https://www.awaytravel.com/products/softside-carry-on-navy-blue",
+    "checked": "2026-11-07",
+    "fields": {
+      "size": {
+        "value": [
+          22.2,
+          14.4,
+          9.1
+        ],
+        "unit": "in",
+        "state": "Published",
+        "source_url": "https://www.awaytravel.com/products/softside-carry-on-navy-blue",
+        "quote": "Exterior measurements 22.2\" H x 14.4\" W x 9.1\" L",
+        "source_label": "Exterior measurements",
+        "checked": "2026-11-07",
+        "note": "Unexpanded baseline; expansion is stated separately.",
+        "qualifier_url": "https://www.awaytravel.com/products/softside-carry-on-navy-blue",
+        "qualifier_quote": "Measurements include wheels and handles."
+      },
+      "weight": {
+        "value": 8.8,
+        "unit": "lb",
+        "state": "Published",
+        "source_url": "https://www.awaytravel.com/products/softside-carry-on-navy-blue",
+        "quote": "Weight 8.8 lbs",
+        "source_label": "Weight",
+        "checked": "2026-11-07"
+      },
+      "shell": {
+        "value": "high-strength nylon",
+        "unit": "",
+        "state": "Published",
+        "source_url": "https://www.awaytravel.com/products/softside-carry-on-navy-blue",
+        "quote": "high-strength nylon",
+        "source_label": null,
+        "checked": "2026-11-07"
+      },
+      "wheels": {
+        "value": "360° smooth-gliding spinner wheels",
+        "unit": "",
+        "state": "Published",
+        "source_url": "https://www.awaytravel.com/products/softside-carry-on-navy-blue",
+        "quote": "360° smooth-gliding spinner wheels",
+        "source_label": null,
+        "checked": "2026-11-07"
+      }
+    }
+  },
+  {
+    "id": "briggs-riley-essential-spinner",
+    "brand": "Briggs & Riley",
+    "model": "Essential 22\" Carry-On Expandable Spinner",
+    "product_url": "https://www.briggs-riley.com/products/essential-carry-on-spinner",
+    "checked": "2026-11-07",
+    "fields": {
+      "size": {
+        "value": [
+          22,
+          14,
+          9
+        ],
+        "unit": "in",
+        "state": "Published",
+        "source_url": "https://www.briggs-riley.com/products/essential-carry-on-spinner",
+        "quote": "Dimensions (Exterior): 22 x 14 x 9 - 11.5 in",
+        "source_label": "Dimensions (Exterior):",
+        "checked": "2026-11-07",
+        "note": "Unexpanded lower depth endpoint; corroboration matches SKU BLU122CXSP-4.",
+        "qualifier_url": "https://briggs-riley.co.uk/products/essential-carry-on-spinner",
+        "qualifier_quote": "Exterior Dimensions\n(includes wheels & handles)"
+      },
+      "weight": {
+        "value": 10,
+        "unit": "lb",
+        "state": "Published",
+        "source_url": "https://www.briggs-riley.com/products/essential-carry-on-spinner",
+        "quote": "Weight: 10 lbs",
+        "source_label": "Weight:",
+        "checked": "2026-11-07"
+      },
+      "shell": {
+        "value": "Premium Ultra-Durable Ballistic Nylon",
+        "unit": "",
+        "state": "Published",
+        "source_url": "https://www.briggs-riley.com/products/essential-carry-on-spinner",
+        "quote": "Materials: Premium Ultra-Durable Ballistic Nylon",
+        "source_label": "Materials:",
+        "checked": "2026-11-07"
+      },
+      "wheels": {
+        "value": "Spinner Wheels",
+        "unit": "",
+        "state": "Published",
+        "source_url": "https://www.briggs-riley.com/products/essential-carry-on-spinner",
+        "quote": "Spinner Wheels",
+        "source_label": null,
+        "checked": "2026-11-07"
+      }
+    }
+  },
+  {
+    "id": "briggs-riley-global-spinner",
+    "brand": "Briggs & Riley",
+    "model": "Global 21\" Carry-On Expandable Spinner",
+    "product_url": "https://www.briggs-riley.com/products/global-carry-on-spinner",
+    "checked": "2026-11-07",
+    "fields": {
+      "size": {
+        "value": [
+          21,
+          15,
+          9
+        ],
+        "unit": "in",
+        "state": "Published",
+        "source_url": "https://www.briggs-riley.com/products/global-carry-on-spinner",
+        "quote": "Dimensions (Exterior): 21 x 15 x 9 - 11.5 in",
+        "source_label": "Dimensions (Exterior):",
+        "checked": "2026-11-07",
+        "note": "Unexpanded lower depth endpoint; corroboration matches the available US Olive variant SKU BLU121CXSPW-7, not the US default color.",
+        "qualifier_url": "https://briggs-riley.co.uk/products/global-carry-on-spinner",
+        "qualifier_quote": "Exterior Dimensions\n(includes wheels & handles)"
+      },
+      "weight": {
+        "value": 9.9,
+        "unit": "lb",
+        "state": "Published",
+        "source_url": "https://www.briggs-riley.com/products/global-carry-on-spinner",
+        "quote": "Weight: 9.9 lbs",
+        "source_label": "Weight:",
+        "checked": "2026-11-07"
+      },
+      "shell": {
+        "value": "Premium Ultra-Durable Ballistic Nylon",
+        "unit": "",
+        "state": "Published",
+        "source_url": "https://www.briggs-riley.com/products/global-carry-on-spinner",
+        "quote": "Materials: Premium Ultra-Durable Ballistic Nylon",
+        "source_label": "Materials:",
+        "checked": "2026-11-07"
+      },
+      "wheels": {
+        "value": "Spinner Wheels",
+        "unit": "",
+        "state": "Published",
+        "source_url": "https://www.briggs-riley.com/products/global-carry-on-spinner",
+        "quote": "Spinner Wheels",
+        "source_label": null,
+        "checked": "2026-11-07"
+      }
+    }
+  },
+  {
+    "id": "samsonite-outline-pro-carry-on",
+    "brand": "Samsonite",
+    "model": "Outline Pro Carry-On Spinner",
+    "product_url": "https://shop.samsonite.com/luggage-carry-on-luggage/outline-pro-carry-on-spinner/137393XXXX.html?dwvar_137393XXXX_color=1373931548",
+    "checked": "2026-11-07",
+    "fields": {
+      "size": {
+        "value": null,
+        "unit": "in",
+        "state": "Not yet verified",
+        "source_url": "https://shop.samsonite.com/luggage-carry-on-luggage/outline-pro-carry-on-spinner/137393XXXX.html?dwvar_137393XXXX_color=1373931548",
+        "quote": "",
+        "source_label": null,
+        "checked": "2026-11-07",
+        "note": "Exterior dimensions are printed, but the retrieved manufacturer page and carry-on guide do not establish whether wheels and handles are included. No complete measurement definition was verified."
+      },
+      "weight": {
+        "value": 6.4,
+        "unit": "lb",
+        "state": "Published",
+        "source_url": "https://shop.samsonite.com/luggage-carry-on-luggage/outline-pro-carry-on-spinner/137393XXXX.html?dwvar_137393XXXX_color=1373931548",
+        "quote": "Weight: 6.4 lbs",
+        "source_label": "Weight:",
+        "checked": "2026-11-07"
+      },
+      "shell": {
+        "value": "Polypropylene",
+        "unit": "",
+        "state": "Published",
+        "source_url": "https://shop.samsonite.com/luggage-carry-on-luggage/outline-pro-carry-on-spinner/137393XXXX.html?dwvar_137393XXXX_color=1373931548",
+        "quote": "Material\n\nPolypropylene",
+        "source_label": "Material",
+        "checked": "2026-11-07"
+      },
+      "wheels": {
+        "value": "dual spinner wheels",
+        "unit": "",
+        "state": "Published",
+        "source_url": "https://shop.samsonite.com/luggage-carry-on-luggage/outline-pro-carry-on-spinner/137393XXXX.html?dwvar_137393XXXX_color=1373931548",
+        "quote": "dual spinner wheels",
+        "source_label": null,
+        "checked": "2026-11-07"
+      }
+    }
+  },
+  {
+    "id": "samsonite-uplift-hardside-carry-on",
+    "brand": "Samsonite",
+    "model": "UpLIFT Hardside Carry-On Spinner",
+    "product_url": "https://shop.samsonite.com/luggage-carry-on-luggage/uplift-hardside-carry-on-spinner/152029XXXX.html?dwvar_152029XXXX_color=1520295963",
+    "checked": "2026-11-07",
+    "fields": {
+      "size": {
+        "value": null,
+        "unit": "in",
+        "state": "Not yet verified",
+        "source_url": "https://shop.samsonite.com/luggage-carry-on-luggage/uplift-hardside-carry-on-spinner/152029XXXX.html?dwvar_152029XXXX_color=1520295963",
+        "quote": "",
+        "source_label": null,
+        "checked": "2026-11-07",
+        "note": "Wheel and handle inclusion was not established in the retrieved manufacturer evidence. The overview also repeats the H axis label where the detailed specification uses W, so no ordered overall measurement is asserted."
+      },
+      "weight": {
+        "value": 5.07,
+        "unit": "lb",
+        "state": "Published",
+        "source_url": "https://shop.samsonite.com/luggage-carry-on-luggage/uplift-hardside-carry-on-spinner/152029XXXX.html?dwvar_152029XXXX_color=1520295963",
+        "quote": "Weight: 5.07 lbs",
+        "source_label": "Weight:",
+        "checked": "2026-11-07",
+        "note": "The description gives 5.07 lbs; the specification table rounds this to 5.1 lbs. The more precise published description is retained."
+      },
+      "shell": {
+        "value": "Polycarbonate",
+        "unit": "",
+        "state": "Published",
+        "source_url": "https://shop.samsonite.com/luggage-carry-on-luggage/uplift-hardside-carry-on-spinner/152029XXXX.html?dwvar_152029XXXX_color=1520295963",
+        "quote": "Material\n\nPolycarbonate",
+        "source_label": "Material",
+        "checked": "2026-11-07"
+      },
+      "wheels": {
+        "value": "Spinner",
+        "unit": "",
+        "state": "Published",
+        "source_url": "https://shop.samsonite.com/luggage-carry-on-luggage/uplift-hardside-carry-on-spinner/152029XXXX.html?dwvar_152029XXXX_color=1520295963",
+        "quote": "UpLIFT Hardside Carry-On Spinner",
+        "source_label": null,
+        "checked": "2026-11-07"
+      }
+    }
+  }
+]

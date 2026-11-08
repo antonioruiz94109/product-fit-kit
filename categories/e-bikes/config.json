@@ -1,0 +1,63 @@
+{
+  "name": "E-bikes",
+  "question": "Which published bike specifications fit your shortlist?",
+  "filters": [
+    {
+      "key": "class",
+      "label": "Class as stated by [brand]",
+      "type": "choice",
+      "hint": "Compare the class explicitly stated by the brand.",
+      "edge_case": "Do not infer class from speed or motor power.",
+      "values": [
+        "1",
+        "2",
+        "3"
+      ]
+    },
+    {
+      "key": "battery",
+      "label": "Battery",
+      "type": "number",
+      "hint": "Compare published battery energy.",
+      "edge_case": "Calculate Wh from V × Ah only with both published inputs.",
+      "unit": "Wh",
+      "mode": "min"
+    },
+    {
+      "key": "weight",
+      "label": "Bike weight",
+      "type": "number",
+      "hint": "Consider lifting, transport and storage.",
+      "edge_case": "Note with or without battery; incompatible measurements are Measured differently.",
+      "unit": "lb",
+      "mode": "max"
+    },
+    {
+      "key": "motor",
+      "label": "Motor",
+      "type": "choice",
+      "hint": "Choose motor location.",
+      "edge_case": "Use explicit manufacturer descriptions; no motor-watt filter.",
+      "values": [
+        "hub",
+        "mid-drive"
+      ]
+    }
+  ],
+  "display_fields": [
+    {
+      "key": "range",
+      "label": "Brand range estimate",
+      "type": "text",
+      "hint": "Manufacturer range claims are estimates.",
+      "edge_case": "Always use Brand estimate; retain the stated conditions."
+    }
+  ],
+  "explainer": {
+    "title": "Why a range estimate is not a promise",
+    "text": "Range depends on terrain, load, assistance level and conditions. Manufacturer estimates are shown for context and excluded from filters and sorting."
+  },
+  "brands": [],
+  "price": false,
+  "notes": "State laws vary. Check local rules."
+}

@@ -1,0 +1,45 @@
+{
+  "name": "GPS watches",
+  "question": "Which watch has the published features you need?",
+  "filters": [
+    {
+      "key": "gps_battery",
+      "label": "Battery in GPS mode",
+      "type": "number",
+      "hint": "Compare runtime in a named GPS mode.",
+      "edge_case": "Record one named mode using the brand’s wording; solar or low-power estimates are Brand estimate.",
+      "unit": "hours",
+      "mode": "min"
+    },
+    {
+      "key": "multiband",
+      "label": "Multi-band GNSS",
+      "type": "yes_no",
+      "hint": "Require simultaneous multi-band reception.",
+      "edge_case": "Do not confuse multiple satellite systems with multiple frequency bands."
+    },
+    {
+      "key": "weight",
+      "label": "Weight",
+      "type": "number",
+      "hint": "Compare the weight you wear.",
+      "edge_case": "Record whether the published weight includes the strap; incompatible measurements are Measured differently.",
+      "unit": "g",
+      "mode": "max"
+    },
+    {
+      "key": "maps",
+      "label": "Offline maps",
+      "type": "yes_no",
+      "hint": "Require maps stored on the watch.",
+      "edge_case": "A breadcrumb trail alone is not an offline map."
+    }
+  ],
+  "display_fields": [],
+  "explainer": {
+    "title": "Why one watch has many battery numbers",
+    "text": "GPS settings, display use, solar charging and power-saving modes affect runtime. Keep the exact named mode with the evidence. Brand estimates stay visible but do not participate in filtering."
+  },
+  "brands": [],
+  "price": false
+}

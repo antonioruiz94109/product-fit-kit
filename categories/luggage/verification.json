@@ -1,0 +1,442 @@
+{
+  "checked": "2026-11-07",
+  "scope": "Independent read-only manufacturer page audit of supplied 15-record data and config snapshot; 18 product pages plus manufacturer carry-on guide actually opened. No project or remote edits.",
+  "method": "Compared original data keys without reproducing source excerpts. Exact casing, values and property labels checked; linebreak presentation is treated as formatting. Status describes evidence, not whether existing cautious state was wrong.",
+  "new_issues": [
+    "away-the-carry-on.fields.weight should be Conflicting (7.1 versus 7.5 lb).",
+    "away-bigger-carry-on.fields.size has cross-page manufacturer conflict.",
+    "briggs-riley-global-spinner SKU corroboration matches an available US variant, not default selected US color."
+  ],
+  "config": "Editorial shell/wheel mappings are consistent judgments; dimensions remain display-only. No manufacturer claim of editorial group labels is implied.",
+  "records": [
+    {
+      "id": "travelpro-crew-classic-compact-spinner",
+      "status": "confirmed",
+      "source_urls": [
+        "https://travelpro.com/products/crew%E2%84%A2-classic-compact-carry-on-expandable-spinner"
+      ],
+      "identity": "confirmed",
+      "fields": {
+        "size": {
+          "status": "confirmed",
+          "quote_and_label": "confirmed"
+        },
+        "weight": {
+          "status": "confirmed",
+          "quote_and_label": "confirmed"
+        },
+        "shell": {
+          "status": "confirmed",
+          "quote_and_label": "confirmed"
+        },
+        "wheels": {
+          "status": "confirmed",
+          "quote_and_label": "confirmed"
+        }
+      },
+      "reason": "Manufacturer product identity, values, spelling/case, and supplied labels confirmed in opened page. Unlabeled feature excerpts have no separate property label."
+    },
+    {
+      "id": "travelpro-maxlite-5-spinner",
+      "status": "confirmed",
+      "source_urls": [
+        "https://travelpro.com/products/maxlite%C2%AE-5-21-expandable-carry-on-spinner"
+      ],
+      "identity": "confirmed",
+      "fields": {
+        "size": {
+          "status": "confirmed",
+          "quote_and_label": "confirmed"
+        },
+        "weight": {
+          "status": "confirmed",
+          "quote_and_label": "confirmed"
+        },
+        "shell": {
+          "status": "confirmed",
+          "quote_and_label": "confirmed"
+        },
+        "wheels": {
+          "status": "confirmed",
+          "quote_and_label": "confirmed"
+        }
+      },
+      "reason": "Manufacturer product identity, values, spelling/case, and supplied labels confirmed in opened page. Unlabeled feature excerpts have no separate property label."
+    },
+    {
+      "id": "away-the-carry-on",
+      "status": "conflicting",
+      "source_urls": [
+        "https://www.awaytravel.com/products/carry-on-jet-black"
+      ],
+      "identity": "confirmed",
+      "fields": {
+        "size": {
+          "status": "conflicting",
+          "quote_and_label": "confirmed",
+          "reason": "Existing conflict confirmed: Size section 22 × 14.4 × 9.1 in, FAQ 21.7 × 14.4 × 9 in. Inclusion of handles and wheels is explicit."
+        },
+        "weight": {
+          "status": "conflicting",
+          "quote_and_label": "confirmed",
+          "reason": "NEW: introductory product text states 7.1 lb; Size and FAQ give 7.5 lb. Retained quote/label is exact but Published status is not justified."
+        },
+        "shell": {
+          "status": "confirmed",
+          "quote_and_label": "confirmed"
+        },
+        "wheels": {
+          "status": "confirmed",
+          "quote_and_label": "confirmed"
+        }
+      },
+      "reason": "Manufacturer product identity, values, spelling/case, and supplied labels confirmed in opened page. Unlabeled feature excerpts have no separate property label."
+    },
+    {
+      "id": "briggs-riley-essential-2-wheel",
+      "status": "confirmed",
+      "source_urls": [
+        "https://www.briggs-riley.com/products/essential-2-wheel-carry-on",
+        "https://briggs-riley.co.uk/products/essential-56cm-2-wheel-expandable-carry-on-navy"
+      ],
+      "identity": "confirmed",
+      "fields": {
+        "size": {
+          "status": "confirmed",
+          "quote_and_label": "confirmed",
+          "reason": "US exterior baseline uses lower depth endpoint; opened UK manufacturer page explicitly includes wheels/handles and matching SKU BLU122CX-4."
+        },
+        "weight": {
+          "status": "confirmed",
+          "quote_and_label": "confirmed"
+        },
+        "shell": {
+          "status": "confirmed",
+          "quote_and_label": "confirmed"
+        },
+        "wheels": {
+          "status": "confirmed",
+          "quote_and_label": "confirmed"
+        }
+      },
+      "reason": "Manufacturer product identity, values, spelling/case, and supplied labels confirmed in opened page. Unlabeled feature excerpts have no separate property label."
+    },
+    {
+      "id": "samsonite-freeform-carry-on",
+      "status": "notfound",
+      "source_urls": [
+        "https://shop.samsonite.com/luggage-carry-on-luggage/freeform-carry-on-spinner/78255XXXX.html?dwvar_78255XXXX_color=782554744",
+        "https://shop.samsonite.com/carry-on-guide.html"
+      ],
+      "identity": "confirmed",
+      "fields": {
+        "size": {
+          "status": "notfound",
+          "quote_and_label": "not applicable; deliberately empty",
+          "reason": "Retain Not yet verified: exterior/overall numbers are present but product page and opened carry-on guide do not establish handles/wheels inclusion. Product and Airline Sizes click returns same page. Depth 9.75 versus 9.8 is compatible decimal rounding; it is not the primary reason for unverified state."
+        },
+        "weight": {
+          "status": "confirmed",
+          "quote_and_label": "confirmed"
+        },
+        "shell": {
+          "status": "confirmed",
+          "quote_and_label": "confirmed"
+        },
+        "wheels": {
+          "status": "confirmed",
+          "quote_and_label": "confirmed"
+        }
+      },
+      "reason": "Manufacturer product identity, values, spelling/case, and supplied labels confirmed in opened page. Unlabeled feature excerpts have no separate property label."
+    },
+    {
+      "id": "travelpro-platinum-elite-spinner",
+      "status": "confirmed",
+      "source_urls": [
+        "https://travelpro.com/products/platinum%C2%AE-elite-21-expandable-carry-on-spinner"
+      ],
+      "identity": "confirmed",
+      "fields": {
+        "size": {
+          "status": "confirmed",
+          "quote_and_label": "confirmed"
+        },
+        "weight": {
+          "status": "confirmed",
+          "quote_and_label": "confirmed"
+        },
+        "shell": {
+          "status": "confirmed",
+          "quote_and_label": "confirmed"
+        },
+        "wheels": {
+          "status": "confirmed",
+          "quote_and_label": "confirmed"
+        }
+      },
+      "reason": "Manufacturer product identity, values, spelling/case, and supplied labels confirmed in opened page. Unlabeled feature excerpts have no separate property label."
+    },
+    {
+      "id": "travelpro-maxlite-5-rollaboard",
+      "status": "confirmed",
+      "source_urls": [
+        "https://travelpro.com/products/maxlite%C2%AE-5-22-expandable-carry-on-rollaboard%C2%AE"
+      ],
+      "identity": "confirmed",
+      "fields": {
+        "size": {
+          "status": "confirmed",
+          "quote_and_label": "confirmed"
+        },
+        "weight": {
+          "status": "confirmed",
+          "quote_and_label": "confirmed"
+        },
+        "shell": {
+          "status": "confirmed",
+          "quote_and_label": "confirmed"
+        },
+        "wheels": {
+          "status": "confirmed",
+          "quote_and_label": "confirmed"
+        }
+      },
+      "reason": "Manufacturer product identity, values, spelling/case, and supplied labels confirmed in opened page. Unlabeled feature excerpts have no separate property label."
+    },
+    {
+      "id": "travelpro-maxlite-air-v2-spinner",
+      "status": "conflicting",
+      "source_urls": [
+        "https://travelpro.com/products/maxlite%C2%AE-air-v2-carry-on-hardside-spinner"
+      ],
+      "identity": "confirmed",
+      "fields": {
+        "size": {
+          "status": "confirmed",
+          "quote_and_label": "confirmed"
+        },
+        "weight": {
+          "status": "conflicting",
+          "quote_and_label": "confirmed",
+          "reason": "Existing conflict confirmed: introduction 6 lb versus dimensions section 6.7 lb. No rounding assumed."
+        },
+        "shell": {
+          "status": "confirmed",
+          "quote_and_label": "confirmed"
+        },
+        "wheels": {
+          "status": "confirmed",
+          "quote_and_label": "confirmed"
+        }
+      },
+      "reason": "Manufacturer product identity, values, spelling/case, and supplied labels confirmed in opened page. Unlabeled feature excerpts have no separate property label."
+    },
+    {
+      "id": "away-bigger-carry-on",
+      "status": "conflicting",
+      "source_urls": [
+        "https://www.awaytravel.com/products/bigger-carry-on-jet-black",
+        "https://www.awaytravel.com/products/carry-on-jet-black"
+      ],
+      "identity": "confirmed",
+      "fields": {
+        "size": {
+          "status": "conflicting",
+          "quote_and_label": "confirmed",
+          "reason": "NEW cross-page conflict: own Size section gives 23 × 15.4 × 9.4 in; Carry-On FAQ names Bigger Carry-On with 22.7 × 15.4 × 9.6 in. Own page establishes handles/wheels inclusion; flag conservatively rather than assume generations."
+        },
+        "weight": {
+          "status": "confirmed",
+          "quote_and_label": "confirmed"
+        },
+        "shell": {
+          "status": "confirmed",
+          "quote_and_label": "confirmed"
+        },
+        "wheels": {
+          "status": "confirmed",
+          "quote_and_label": "confirmed"
+        }
+      },
+      "reason": "Manufacturer product identity, values, spelling/case, and supplied labels confirmed in opened page. Unlabeled feature excerpts have no separate property label."
+    },
+    {
+      "id": "away-carry-on-flex",
+      "status": "confirmed",
+      "source_urls": [
+        "https://www.awaytravel.com/products/carry-on-flex-jet-black"
+      ],
+      "identity": "confirmed",
+      "fields": {
+        "size": {
+          "status": "confirmed",
+          "quote_and_label": "confirmed"
+        },
+        "weight": {
+          "status": "confirmed",
+          "quote_and_label": "confirmed"
+        },
+        "shell": {
+          "status": "confirmed",
+          "quote_and_label": "confirmed"
+        },
+        "wheels": {
+          "status": "confirmed",
+          "quote_and_label": "confirmed"
+        }
+      },
+      "reason": "Manufacturer product identity, values, spelling/case, and supplied labels confirmed in opened page. Unlabeled feature excerpts have no separate property label."
+    },
+    {
+      "id": "away-softside-carry-on",
+      "status": "confirmed",
+      "source_urls": [
+        "https://www.awaytravel.com/products/softside-carry-on-navy-blue"
+      ],
+      "identity": "confirmed",
+      "fields": {
+        "size": {
+          "status": "confirmed",
+          "quote_and_label": "confirmed",
+          "reason": "Page axes H/W/L retained in quote; final depth grouping of last axis is editorial interpretation of listed exterior dimensions."
+        },
+        "weight": {
+          "status": "confirmed",
+          "quote_and_label": "confirmed"
+        },
+        "shell": {
+          "status": "confirmed",
+          "quote_and_label": "confirmed"
+        },
+        "wheels": {
+          "status": "confirmed",
+          "quote_and_label": "confirmed"
+        }
+      },
+      "reason": "Manufacturer product identity, values, spelling/case, and supplied labels confirmed in opened page. Unlabeled feature excerpts have no separate property label."
+    },
+    {
+      "id": "briggs-riley-essential-spinner",
+      "status": "confirmed",
+      "source_urls": [
+        "https://www.briggs-riley.com/products/essential-carry-on-spinner",
+        "https://briggs-riley.co.uk/products/essential-carry-on-spinner"
+      ],
+      "identity": "confirmed",
+      "fields": {
+        "size": {
+          "status": "confirmed",
+          "quote_and_label": "confirmed",
+          "reason": "US exterior baseline uses lower depth endpoint; opened UK manufacturer page explicitly includes wheels/handles and matching SKU BLU122CXSP-4."
+        },
+        "weight": {
+          "status": "confirmed",
+          "quote_and_label": "confirmed"
+        },
+        "shell": {
+          "status": "confirmed",
+          "quote_and_label": "confirmed"
+        },
+        "wheels": {
+          "status": "confirmed",
+          "quote_and_label": "confirmed"
+        }
+      },
+      "reason": "Manufacturer product identity, values, spelling/case, and supplied labels confirmed in opened page. Unlabeled feature excerpts have no separate property label."
+    },
+    {
+      "id": "briggs-riley-global-spinner",
+      "status": "confirmed",
+      "source_urls": [
+        "https://www.briggs-riley.com/products/global-carry-on-spinner",
+        "https://briggs-riley.co.uk/products/global-carry-on-spinner"
+      ],
+      "identity": "confirmed with qualification: US default selection is Chocolate BLU121CXSPW-18; US embedded available variants explicitly include Olive BLU121CXSPW-7, matching UK selection. Pin Olive variant if exact selected-color identity is required.",
+      "fields": {
+        "size": {
+          "status": "confirmed",
+          "quote_and_label": "confirmed",
+          "reason": "US exterior baseline uses lower depth endpoint; opened UK manufacturer page explicitly includes wheels/handles and matching SKU BLU121CXSPW-7."
+        },
+        "weight": {
+          "status": "confirmed",
+          "quote_and_label": "confirmed"
+        },
+        "shell": {
+          "status": "confirmed",
+          "quote_and_label": "confirmed"
+        },
+        "wheels": {
+          "status": "confirmed",
+          "quote_and_label": "confirmed"
+        }
+      },
+      "reason": "Manufacturer product identity, values, spelling/case, and supplied labels confirmed in opened page. Unlabeled feature excerpts have no separate property label."
+    },
+    {
+      "id": "samsonite-outline-pro-carry-on",
+      "status": "notfound",
+      "source_urls": [
+        "https://shop.samsonite.com/luggage-carry-on-luggage/outline-pro-carry-on-spinner/137393XXXX.html?dwvar_137393XXXX_color=1373931548",
+        "https://shop.samsonite.com/carry-on-guide.html"
+      ],
+      "identity": "confirmed",
+      "fields": {
+        "size": {
+          "status": "notfound",
+          "quote_and_label": "not applicable; deliberately empty",
+          "reason": "Retain Not yet verified: exterior/overall numbers are present but product page and opened carry-on guide do not establish handles/wheels inclusion. Product and Airline Sizes click returns same page."
+        },
+        "weight": {
+          "status": "confirmed",
+          "quote_and_label": "confirmed"
+        },
+        "shell": {
+          "status": "confirmed",
+          "quote_and_label": "confirmed"
+        },
+        "wheels": {
+          "status": "confirmed",
+          "quote_and_label": "confirmed"
+        }
+      },
+      "reason": "Manufacturer product identity, values, spelling/case, and supplied labels confirmed in opened page. Unlabeled feature excerpts have no separate property label."
+    },
+    {
+      "id": "samsonite-uplift-hardside-carry-on",
+      "status": "notfound",
+      "source_urls": [
+        "https://shop.samsonite.com/luggage-carry-on-luggage/uplift-hardside-carry-on-spinner/152029XXXX.html?dwvar_152029XXXX_color=1520295963",
+        "https://shop.samsonite.com/carry-on-guide.html"
+      ],
+      "identity": "confirmed",
+      "fields": {
+        "size": {
+          "status": "notfound",
+          "quote_and_label": "not applicable; deliberately empty",
+          "reason": "Retain Not yet verified: exterior/overall numbers are present but product page and opened carry-on guide do not establish handles/wheels inclusion. Product and Airline Sizes click returns same page. Overview repeats H axis; detailed table uses H/L/W."
+        },
+        "weight": {
+          "status": "confirmed",
+          "quote_and_label": "confirmed",
+          "reason": "5.07 in overview/description and 5.1 in table are compatible rounding. Marketing 5 pounds also compatible rounding."
+        },
+        "shell": {
+          "status": "confirmed",
+          "quote_and_label": "confirmed"
+        },
+        "wheels": {
+          "status": "confirmed",
+          "quote_and_label": "confirmed"
+        }
+      },
+      "reason": "Manufacturer product identity, values, spelling/case, and supplied labels confirmed in opened page. Unlabeled feature excerpts have no separate property label."
+    }
+  ],
+  "resolutions": {
+    "away-the-carry-on.fields.weight": "Changed to Conflicting before review-branch commit.",
+    "away-bigger-carry-on.fields.size": "Changed to Conflicting before review-branch commit.",
+    "briggs-riley-global-spinner": "Corroboration is explicitly for the matching available Olive variant, not the US default color. No price/color-dependent claim is made."
+  }
+}
