@@ -1,6 +1,6 @@
 # Product Fit Kit — change report
 
-Updated 2026-11-07. Built on the existing `build/product-fit-kit` review branch. **Merge remains on hold. GitHub Pages remains disabled.** Stack & Drop was read only and was not changed.
+Updated 2026-11-07. PR #1 was merged from `build/product-fit-kit`. **The owner approved GitHub Pages publication from main / root on 2026-11-07, with shoes as the default and the documented evidence gaps accepted.** Stack & Drop was read only and was not changed.
 
 ## Delivered
 
@@ -60,7 +60,7 @@ The existing bundled browser tooling was used; no dependency or build step was a
 
 ## Review boundaries
 
-The complete template and researched luggage starter catalog are ready for review, with the evidence limits above. Market representativeness, refresh frequency, actual airline acceptance and physical measurement equivalence are not certified. The owner decides whether and when to merge and, separately, enable Pages. No change in this branch deploys the site.
+The complete template and researched luggage starter catalog are ready for review, with the evidence limits above. Market representativeness, refresh frequency, actual airline acceptance and physical measurement equivalence are not certified. The owner has approved the merge and subsequent Pages publication. The validation workflow checks changes; GitHub Pages publishes from main / root.
 
 ## Qualifier-evidence revision — 2026-11-07
 
@@ -70,4 +70,10 @@ The checker rejects missing or empty required qualifier evidence, incomplete opt
 
 Cards show the qualifier quote and a separate source link inside their existing source details. Extraction/verification prompts and schema/config guides explain the rule. README now explicitly identifies removal of the luggage size-fit filter as an example of the method rejecting a filter the data cannot support.
 
-All four category checks and 35 automated tests pass, with the same four expected conflict warnings. Full browser regression for both categories passed, including the new Away qualifier quote and Briggs UK link, mobile layouts, filters, shared links, empty data and evidence-state handling. No merge or Pages activation was performed.
+All four category checks and 35 automated tests pass, with the same four expected conflict warnings. Full browser regression for both categories passed, including the new Away qualifier quote and Briggs UK link, mobile layouts, filters, shared links, empty data and evidence-state handling. Merge and publication were still on hold at the time of that revision.
+
+## Publication checks — 2026-11-07
+
+Rechecked the merged main version: all four category validations and 35 automated tests pass, with the four documented conflict warnings. Both categories passed browser regression under the `/product-fit-kit/` project path, including mobile layouts and shared filter links. Shoes remain the default; luggage remains populated with 15 models. The documented evidence gaps are accepted. Added `.nojekyll` for plain static-file publication.
+
+Public site: https://antonioruiz94109.github.io/product-fit-kit/

@@ -10,7 +10,7 @@ An open-source template for a small product-filter site built from manufacturer 
 2. Run [the fit-test prompt](prompts/fit-test.md), then review [the seven tests](docs/fit-test.md).
 3. Draft your category with [the criteria prompt](prompts/criteria.md), following [the config guide](docs/category-config.md). Set the category folder and title in `site.json`.
 4. Run [extraction](prompts/extraction.md) on five products. If a filter is missing for two, demote or drop it. Expand to roughly 15–30 models only after the probe passes.
-5. [Verify independently](prompts/verify.md). Review and merge the changes before enabling GitHub Pages from **main / root**. This repository’s Pages remains disabled pending the owner’s approval.
+5. [Verify independently](prompts/verify.md). Review and merge the changes before enabling GitHub Pages from **main / root**. PR #1 has been merged, and the owner approved publication on 2026-11-07. Shoes remain the default category; populated luggage is included.
 
 For a local preview, run `python3 -m http.server 8000` and visit `http://localhost:8000`. Opening the HTML file directly will not reliably load JSON. Validation requires Node.js 22 or later, with no package installation:
 
