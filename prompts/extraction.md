@@ -8,7 +8,7 @@
 - Use “Not yet verified” if evidence cannot be retrieved or verified. Never confuse failed access with an omission.
 - Exception: brand-hosted dealer pages listed in the config are allowed for price only. Label these Dealer price; never List price.
 
-Last tested with: [model, date — owner to fill in]
+Last tested with: Used during the luggage build inside the project chat, 2026-11-07; not yet tested by a fresh user.
 
 # Extract evidence
 
