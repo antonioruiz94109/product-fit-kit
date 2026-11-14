@@ -8,18 +8,28 @@ An open-source template for a small product-filter site built from manufacturer 
 
 1. Create your own repository using **Use this template**.
 2. Run [the fit-test prompt](prompts/fit-test.md), then review [the seven tests](docs/fit-test.md).
-3. Draft your category with [the criteria prompt](prompts/criteria.md), following [the config guide](docs/category-config.md). Set the category folder and title in `site.json`.
+3. Draft your category with [the criteria prompt](prompts/criteria.md), following [the config guide](docs/category-config.md). Set the category folder and short site name in `site.json`.
 4. Run [extraction](prompts/extraction.md) on five products. If a filter is missing for two, demote or drop it. Expand to roughly 15–30 models only after the probe passes.
-5. [Verify independently](prompts/verify.md). Review and merge the changes before enabling GitHub Pages from **main / root**. PR #1 has been merged, and the owner approved publication on 2026-11-07. Shoes remain the default category; populated luggage is included.
+5. [Verify independently](prompts/verify.md). Review and merge the changes before enabling GitHub Pages from **main / root**.
 
-For a local preview, run `python3 -m http.server 8000` and visit `http://localhost:8000`. Opening the HTML file directly will not reliably load JSON. Validation requires Node.js 22 or later, with no package installation:
+For a local preview, run `python3 -m http.server 8000` and visit `http://localhost:8000`. Opening the HTML file directly will not reliably load JSON. Node is optional: GitHub runs both checks on every pull request. To run them locally, use Node.js 22 or later, with no package installation:
 
 ```sh
 node scripts/publish-check.js
 node --test tests/core.test.js
 ```
 
-The GitHub Action runs the same checks on pull requests and pushes to main. It does not deploy.
+The GitHub Action also runs these checks on pushes to main. It does not deploy.
+
+With no local setup, edit files directly in GitHub’s web editor and propose your changes in a pull request.
+
+## Start clean
+
+1. Create `categories/my-category/config.json` using the [config guide](docs/category-config.md), with the owner-approved filters and brands.
+2. Create `categories/my-category/data.json` containing `[]`. An empty catalog is supported.
+3. Set `site.json` to `{ "name": "Your site name", "category": "my-category" }`. The name appears in the header and browser tab.
+4. Delete any example folders you do not want: `categories/shoes-sample`, `categories/luggage`, `categories/gps-watches` and `categories/e-bikes`. Keep `tests/fixtures/`; tests use their own copies and remain runnable.
+5. Open a pull request and review both checks before merging.
 
 ## Rules you can change
 
@@ -41,10 +51,14 @@ The probe step removed the luggage size-fit filter—an example of the method cu
 
 ## Included examples
 
-- **Shoes:** ten men’s models across six brands; active by default. **Sample data copied from Stack & Drop on 2026-11-06. Not kept up to date.** Values were checked against current manufacturer pages; the [change report](CHANGE_REPORT.md) lists differences and unresolved evidence. Intended-use filters use the editorial groups Road daily / Road fast / Trail; cards retain exact manufacturer wording and labeled quotes. Below 768 px, open Filters (n) and choose Show X to return to results. No verified dealer offer was found; that requested example is documented as missing.
+- **Shoes:** ten men’s models across six brands; active by default. **Sample data copied from Stack & Drop on 2026-11-06. Not kept up to date.** The demo includes checked omissions and unverified evidence. Intended-use filters use the editorial groups Road daily / Road fast / Trail; cards retain exact manufacturer wording and labeled quotes. Below 768 px, open Filters (n) and choose Show X to return to results. The dealer-price presentation is covered by test fixtures.
 - **Luggage:** a curated 15-model US-market starter catalog across four brands, researched 2026-11-07. Filters cover weight, construction and wheel mechanism. Dimensions are display-only after the probe found unreliable comparisons. Read the [research report](categories/luggage/RESEARCH.md) for scope, sources and unresolved evidence. It is not comprehensive and makes no airline-fit promise.
 - **GPS watches and e-bikes:** configs only. Add `data.json` before activating either. They are not populated research datasets.
 
-Shoes remain the default. Switch the active category by editing only `site.json`. For luggage, use `"category": "luggage"` and choose your site title. Research output goes in the category’s data file; everyday filter definitions live in config. Test fixtures are intentionally damaged copies of verified shoe records, kept under `tests/` and never loaded by the site.
+The demo opens the shoe category. To display luggage, set `"category": "luggage"` in `site.json` and choose your short site name. Research output goes in the category’s data file; everyday filter definitions live in config. Test fixtures include fixed example copies and deliberately damaged records, kept under `tests/` and never loaded by the site.
+
+Coding agents can find the kit’s rules and owner review gates in [AGENTS.md](AGENTS.md).
+
+For the original development record, see the [phase 1 build log](docs/history/phase-1-build-log.md).
 
 Inspired by [Stack & Drop](https://antonioruiz94109.github.io/stack-and-drop/).
