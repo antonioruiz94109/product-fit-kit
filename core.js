@@ -143,15 +143,17 @@
         label,
         value: f.type === "benchmark"
           ? "Cannot determine"
-          : `${p.brand}'s pages disagree, not shown`,
+          : `${f.key === "price" ? "Price: " : ""}${p.brand}'s pages disagree, not shown`,
         evidence: { note: r.note, source_url: r.source_url },
       };
     }
     let value;
     if (f.type === "benchmark" && !usable(r)) value = "Cannot determine";
-    else if (r.state === "Not published") value = `Not published by ${p.brand}`;
-    else if (r.state === "Not yet verified") value = "Not yet verified";
-    else if (typeof r.value === "boolean") value = r.value ? "Yes" : "No";
+    else if (r.state === "Not published") {
+      value = `${f.key === "price" ? "Price not" : "Not"} published by ${p.brand}`;
+    } else if (r.state === "Not yet verified") {
+      value = f.key === "price" ? "Price not yet verified" : "Not yet verified";
+    } else if (typeof r.value === "boolean") value = r.value ? "Yes" : "No";
     else if (Array.isArray(r.value)) {
       value = r.value.map((v, i) => `${(f.axes || ["L", "W", "D"])[i]} ${v}`).join(" × ");
       value += ` ${r.unit || ""}`;

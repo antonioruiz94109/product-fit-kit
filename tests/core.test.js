@@ -610,6 +610,22 @@ test("compact cards preserve special-state labels and original measurements", ()
 
 const { loadApp, descendants } = require("./helpers/app-dom.js");
 
+test("unavailable prices identify Price on the closed card", async () => {
+  const p = structuredClone(data[0]);
+  for (const [state, expected] of [
+    ["Not yet verified", "Price not yet verified"],
+    ["Not published", `Price not published by ${p.brand}`],
+    ["Conflicting", `Price: ${p.brand}'s pages disagree, not shown`],
+  ]) {
+    p.fields.price.state = state;
+    p.fields.price.value = state === "Conflicting" ? data[0].fields.price.value : null;
+    const { cards } = await loadApp(c, [p]);
+    const price = descendants(cards[0]).find((n) => n.dataset.field === "price");
+    assert.equal(price.textContent, expected);
+    assert.ok(!price.textContent.includes("$"));
+  }
+});
+
 test("rendered cards have one shared disclosure with all evidence and product date", async () => {
   const { cards } = await loadApp(c, [data[0]]);
   const nodes = descendants(cards[0]);
