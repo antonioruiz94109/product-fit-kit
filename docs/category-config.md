@@ -17,7 +17,7 @@ Use **3–5 entries in `filters`**, including any benchmark. Each has a unique `
 
 Luggage uses three filters: listed empty weight, construction and wheel mechanism. Construction and wheel choices use explicit editorial mappings. Overall dimensions are display-only: the five-product probe found two conflicting or unverified measurements, so the proposed size benchmark was removed under the method’s rule. See the category’s RESEARCH.md for the evidence. Generic benchmarks remain supported: name a number/dimensions source and define the threshold in its unit and axis order. Only Published or Converted source values are eligible; converted comparisons use unrounded originals. A benchmark date records the rule review, not airline research.
 
-For an empty category, keep a `data.json` containing `[]` until research is ready. The supplied luggage file is now populated. Set `site.json`’s `category` to the folder name and update its `title`; no code changes are needed. GPS watches and e-bikes are config-only: create their empty data file before activating either.
+For an empty category, keep a `data.json` containing `[]` until research is ready. The supplied luggage file is now populated. Set `site.json`’s `category` to the folder name and set its short `name` for the header and browser tab; no code changes are needed. GPS watches and e-bikes are config-only: create their empty data file before activating either.
 
 ## Included measurement rules
 

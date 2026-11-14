@@ -20,7 +20,7 @@ Two of the original five probe products lacked trustworthy overall dimensions: A
 
 Independent review found one conflicting weight in the original five-product probe, below the threshold for dropping that filter. It also found a cross-page dimension discrepancy for another Away model. All findings were incorporated before final checks.
 
-See [the research report](categories/luggage/RESEARCH.md), [field-by-field independent verification](categories/luggage/verification.json), and [source records](categories/luggage/data.json).
+See [the research report](../../categories/luggage/RESEARCH.md), [field-by-field independent verification](../../categories/luggage/verification.json), and [source records](../../categories/luggage/data.json).
 
 | Luggage evidence state | Count | Treatment |
 | --- | --- | --- |
