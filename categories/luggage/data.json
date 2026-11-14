@@ -122,7 +122,7 @@
         "quote": "Exterior measurements 22\" x 14.4\" x 9.1\"",
         "source_label": "Exterior measurements",
         "checked": "2026-11-07",
-        "note": "FAQ and specification block give conflicting exterior dimensions. Hidden until resolved.",
+        "note": "FAQ and specification block give conflicting exterior dimensions.",
         "qualifier_url": "https://www.awaytravel.com/products/carry-on-jet-black",
         "qualifier_quote": "Measurements include handles and wheels."
       },
@@ -134,7 +134,7 @@
         "quote": "Weight 7.5 lbs",
         "source_label": "Weight",
         "checked": "2026-11-07",
-        "note": "The introduction and specification block on this manufacturer page state different weights. Hidden until the discrepancy is resolved."
+        "note": "The introduction and specification block on this manufacturer page state different weights."
       },
       "shell": {
         "value": "100% polycarbonate shell",
@@ -389,7 +389,7 @@
         "quote": "Weight: 6.7 lbs.",
         "source_label": "Weight:",
         "checked": "2026-11-07",
-        "note": "Exact specification and size-comparison table give 6.7 lb, but the same page’s marketing introduction describes a 6-lb. spinner. No rounding interpretation assumed; excluded pending clarification."
+        "note": "The exact specification and size-comparison table disagree with the weight in the same page’s marketing introduction."
       },
       "shell": {
         "value": "polycarbonate shell",
@@ -430,7 +430,7 @@
         "quote": "Exterior measurements 23\" x 15.4\" x 9.4\"",
         "source_label": "Exterior measurements",
         "checked": "2026-11-07",
-        "note": "This product’s specification block conflicts with the dimensions for this model in the manufacturer’s Carry-On FAQ. Hidden until resolved. Cross-check: https://www.awaytravel.com/products/carry-on-jet-black",
+        "note": "This product’s specification block conflicts with the dimensions for this model in the manufacturer’s Carry-On FAQ. Cross-check: https://www.awaytravel.com/products/carry-on-jet-black",
         "qualifier_url": "https://www.awaytravel.com/products/bigger-carry-on-jet-black",
         "qualifier_quote": "Measurements include handles and wheels."
       },

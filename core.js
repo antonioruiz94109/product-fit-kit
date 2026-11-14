@@ -132,6 +132,66 @@
       ? f.mapping.values[String(value)]
       : [];
   }
+  // Presentation is separate from comparable values used by filters and sorting.
+  // Conflicts deliberately expose no measurement, quote, original or qualifier.
+  function present(p, f) {
+    const r = record(p, f);
+    if (!r) return null;
+    const label = f.label.replace("[brand]", p.brand);
+    if (r.state === "Conflicting") {
+      return {
+        label,
+        value: f.type === "benchmark"
+          ? "Cannot determine"
+          : `${p.brand}'s pages disagree, not shown`,
+        evidence: { note: r.note, source_url: r.source_url },
+      };
+    }
+    let value;
+    if (f.type === "benchmark" && !usable(r)) value = "Cannot determine";
+    else if (r.state === "Not published") value = `Not published by ${p.brand}`;
+    else if (r.state === "Not yet verified") value = "Not yet verified";
+    else if (typeof r.value === "boolean") value = r.value ? "Yes" : "No";
+    else if (Array.isArray(r.value)) {
+      value = r.value.map((v, i) => `${(f.axes || ["L", "W", "D"])[i]} ${v}`).join(" × ");
+      value += ` ${r.unit || ""}`;
+    } else if (f.key === "price") {
+      value = new Intl.NumberFormat("en-US", {
+        style: "currency",
+        currency: "USD",
+      }).format(r.value);
+    } else value = `${r.value}${r.unit ? " " + r.unit : ""}`;
+    const labels = {
+      Converted: "Converted",
+      Calculated: "Calculated from published specs",
+      "Measured differently": "Measured differently",
+      "Brand estimate": "Brand estimate",
+    };
+    const mapped = f.mapping && usable(r);
+    return {
+      label,
+      value,
+      stateLabel: labels[r.state],
+      dealer: f.key === "price" && r.price_kind === "dealer",
+      groups: mapped ? choiceGroups(f, r.value) : [],
+      wording: mapped ? `${p.brand} says: ${r.value}` : null,
+      groupingLabel: mapped ? f.mapping.label : null,
+      evidence: {
+        state: r.state,
+        quote: r.quote,
+        source_url: r.source_url,
+        checked: r.checked,
+        note: r.note,
+        qualifier_quote: r.qualifier_quote,
+        qualifier_url: r.qualifier_url,
+        original: r.original,
+        benchmarkChecked: f.type === "benchmark" ? f.checked : null,
+        priceContext: f.key === "price" && r.price_kind
+          ? `${r.price_kind === "dealer" ? "Dealer price" : "Manufacturer US price"}, checked ${r.checked}`
+          : null,
+      },
+    };
+  }
   function matches(p, c, selection, ignore) {
     return Object.entries(selection).every(([key, values]) => {
       if (key === ignore || !values || !values.length) return true;
@@ -231,6 +291,7 @@
     fields,
     record,
     choiceGroups,
+    present,
     matches,
     readSelection,
     writeSelection,

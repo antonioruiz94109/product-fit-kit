@@ -503,7 +503,7 @@ function validate(config, data, today = new Date().toISOString().slice(0, 10)) {
           err(label, f.key, "dealer price needs configured dealer domain");
       }
       if (r.state === "Conflicting")
-        warn(label, f.key, "Conflicting record hidden from site");
+        warn(label, f.key, "Conflicting record shown as a labeled gap");
     }
   }
   return { errors, warnings };
@@ -516,12 +516,12 @@ function run(root = path.resolve(__dirname, "..")) {
       fs.readFileSync(path.join(root, "site.json"), "utf8"),
     );
     if (
-      typeof site.title !== "string" ||
-      !site.title.trim() ||
+      typeof site.name !== "string" ||
+      !site.name.trim() ||
       typeof site.category !== "string" ||
       !/^[a-z0-9-]+$/.test(site.category)
     )
-      throw Error("site.json needs title and a safe category folder name");
+      throw Error("site.json needs name and a safe category folder name");
     for (const name of fs.readdirSync(path.join(root, "categories"))) {
       const dir = path.join(root, "categories", name);
       if (!fs.statSync(dir).isDirectory()) continue;

@@ -310,96 +310,154 @@ h2 {
   background: var(--white);
   border: 1px solid var(--line);
   border-radius: 10px;
-  padding: 23px;
+  padding: 16px;
   min-width: 0;
   overflow-wrap: anywhere;
 }
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+.card-identity {
+  min-width: 0;
+}
 .brand {
-  font-size: 11px;
+  font-size: 10px;
   text-transform: uppercase;
-  letter-spacing: 1.4px;
+  letter-spacing: 1.2px;
   color: var(--muted);
-  margin: 0 0 5px;
+  margin: 0 0 4px;
   font-weight: 700;
 }
 .card h3 {
   font-family: Georgia, "Times New Roman", serif;
   font-weight: 400;
-  font-size: 27px;
-  letter-spacing: -0.6px;
-  line-height: 1.2;
-  margin: 0 0 16px;
+  font-size: 23px;
+  letter-spacing: -0.5px;
+  line-height: 1.15;
+  margin: 0;
+}
+.card-price {
+  text-align: right;
+  max-width: 43%;
+  flex-shrink: 0;
+  font-size: 14px;
+}
+.card-price .spec-value {
+  display: block;
+}
+.dealer-tag {
+  display: block;
+  font-size: 11px;
+  font-weight: 700;
+  color: #785322;
+}
+.mapped-choice {
+  margin-bottom: 10px;
+}
+.group-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+.group-chip {
+  display: inline-block;
+  border-radius: 4px;
+  background: var(--wash);
+  padding: 2px 7px;
+  font-size: 11px;
+}
+.brand-wording {
+  margin: 4px 0 0;
+  font-size: 11px;
+  color: var(--muted);
 }
 .product-link {
   display: inline-flex;
   align-items: center;
   min-height: 32px;
-  font-size: 12px;
-  margin-bottom: 17px;
+  font-size: 11px;
 }
 .specs {
   margin: 0;
 }
 .spec {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 10px;
   border-top: 1px solid var(--line);
-  padding: 12px 0;
+  padding: 6px 0;
 }
 .spec dt {
   font-size: 11px;
   color: var(--muted);
-  margin: 0 0 4px;
+  flex: 1;
 }
 .spec dd {
   margin: 0;
-  font-size: 15px;
+  max-width: 62%;
+  text-align: right;
+  font-size: 12px;
 }
 .state {
   display: block;
-  margin-top: 4px;
+  margin: 3px 0 0;
   color: var(--muted);
   font-size: 11px;
 }
-.state.unverified {
-  color: #785322;
-}
-.spec-note {
-  display: block;
-  font-size: 11px;
-  color: var(--muted);
+.card-footer {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: start;
+  gap: 0 8px;
+  border-top: 1px solid var(--line);
   margin-top: 4px;
 }
 .evidence {
   font-size: 11px;
-  margin-top: 6px;
+  min-width: 0;
+}
+.evidence[open] {
+  grid-column: 1 / -1;
 }
 .evidence summary {
   color: var(--green);
   padding: 7px 0;
   min-height: 32px;
 }
+.field-evidence {
+  border-top: 1px solid var(--line);
+  padding: 10px 0;
+}
+.field-evidence h4 {
+  margin: 0 0 4px;
+  font-size: 12px;
+}
+.field-evidence p {
+  margin: 5px 0;
+}
 .evidence blockquote {
   border-left: 2px solid var(--line);
   padding-left: 10px;
   margin: 5px 0 9px;
   color: var(--muted);
+  white-space: pre-wrap;
 }
 .evidence a {
   display: inline-block;
   min-height: 32px;
   padding: 5px 0;
 }
-.original {
-  font-size: 12px;
-  padding: 6px 0;
-  min-height: 32px;
-  color: var(--green);
-}
 .checked {
   font-size: 11px;
   color: var(--muted);
   margin: 9px 0 0;
   border-top: 1px solid var(--line);
-  padding-top: 15px;
+  padding-top: 10px;
 }
 .stale {
   color: #785322;
@@ -513,7 +571,7 @@ footer {
     max-width: 170px;
   }
   .card {
-    padding: 21px;
+    padding: 16px;
   }
   .cards {
     gap: 14px;

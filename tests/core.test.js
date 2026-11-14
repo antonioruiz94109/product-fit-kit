@@ -7,11 +7,11 @@ const K = require("../core.js"),
   { validate } = require("../scripts/publish-check.js");
 const read = (p) =>
   JSON.parse(fs.readFileSync(path.join(__dirname, "..", p), "utf8"));
-const c = read("categories/shoes-sample/config.json"),
-  data = read("categories/shoes-sample/data.json"),
+const c = read("tests/fixtures/shoes-sample/config.json"),
+  data = read("tests/fixtures/shoes-sample/data.json"),
   today = new Date().toISOString().slice(0, 10);
 const fixture = (name) => read(`tests/fixtures/${name}.json`);
-test("all four configs and shipped data validate", () => {
+test("all installed configs and shipped data validate", () => {
   for (const name of fs.readdirSync(path.join(__dirname, "../categories"))) {
     const config = read(`categories/${name}/config.json`);
     const file = `categories/${name}/data.json`;
@@ -124,7 +124,7 @@ test("calendar age warning boundary", () => {
   assert.equal(K.stale("2025-11-06", "2026-11-07"), true);
 });
 test("empty category validates and benchmark excludes incompatible states", () => {
-  const luggage = read("categories/luggage/config.json");
+  const luggage = read("tests/fixtures/luggage/config.json");
   assert.deepEqual(validate(luggage, [], today).errors, []);
   // Real published shoe drop becomes a numeric benchmark input; no invented product specs.
   const p = data[0],
@@ -311,7 +311,7 @@ test("publish-check CLI fails broken fixtures and passes warn-only fixtures", ()
     fs.mkdirSync(dir, { recursive: true });
     fs.writeFileSync(
       path.join(root, "site.json"),
-      JSON.stringify({ title: "Validation fixture", category: "sample" }),
+      JSON.stringify({ name: "Validation fixture", category: "sample" }),
     );
     for (const name of [
       "missing-quote",
@@ -351,8 +351,8 @@ test("publish-check CLI fails broken fixtures and passes warn-only fixtures", ()
   }
 });
 test("populated luggage passes its probe rule and keeps sizes display-only", () => {
-  const config = read("categories/luggage/config.json"),
-    products = read("categories/luggage/data.json");
+  const config = read("tests/fixtures/luggage/config.json"),
+    products = read("tests/fixtures/luggage/data.json");
   assert.equal(products.length, 15);
   assert.equal(new Set(products.map((p) => p.brand)).size, 4);
   assert.equal(config.filters.length, 3);
@@ -382,8 +382,8 @@ test("populated luggage passes its probe rule and keeps sizes display-only", () 
   );
 });
 test("dimension conversions validate against published originals and benchmark axes", () => {
-  const config = structuredClone(read("categories/luggage/config.json")),
-    product = structuredClone(read("categories/luggage/data.json")[0]);
+  const config = structuredClone(read("tests/fixtures/luggage/config.json")),
+    product = structuredClone(read("tests/fixtures/luggage/data.json")[0]);
   const f = config.display_fields.find((f) => f.key === "size"),
     r = product.fields.size,
     original = structuredClone(r.value);
@@ -404,7 +404,7 @@ test("dimension conversions validate against published originals and benchmark a
   assert.equal(K.record(product, benchmark).value, true);
   const tooLarge = structuredClone(product);
   tooLarge.fields.size.original.value[0] = read(
-    "categories/luggage/data.json",
+    "tests/fixtures/luggage/data.json",
   )[1].fields.size.value[0];
   assert.equal(K.record(tooLarge, benchmark).value, false);
   r.value[0] = r.value[1];
@@ -429,8 +429,8 @@ test("original unit must be a unit token, not a letter inside the source label",
   );
 });
 test("luggage size requires paired qualifier evidence for every valued state", () => {
-  const config = read("categories/luggage/config.json"),
-    products = read("categories/luggage/data.json");
+  const config = read("tests/fixtures/luggage/config.json"),
+    products = read("tests/fixtures/luggage/data.json");
   assert.equal(
     config.display_fields.find((f) => f.key === "size").qualifier_required,
     true,
@@ -454,8 +454,8 @@ test("luggage size requires paired qualifier evidence for every valued state", (
   );
 });
 test("qualifier URLs enforce brand domains and permit explicitly allowed UK evidence", () => {
-  const config = read("categories/luggage/config.json"),
-    products = read("categories/luggage/data.json");
+  const config = read("tests/fixtures/luggage/config.json"),
+    products = read("tests/fixtures/luggage/data.json");
   for (const url of [
     "https://example.com/",
     "https://travelpro.com.example.com/",
@@ -484,8 +484,8 @@ test("qualifier URLs enforce brand domains and permit explicitly allowed UK evid
   );
 });
 test("unavailable values need no fabricated qualifier; optional pairs remain validated", () => {
-  const config = read("categories/luggage/config.json"),
-    unknown = read("categories/luggage/data.json").filter(
+  const config = read("tests/fixtures/luggage/config.json"),
+    unknown = read("tests/fixtures/luggage/data.json").filter(
       (p) => p.fields.size.state === "Not yet verified",
     );
   assert.equal(unknown.length, 3);
@@ -505,4 +505,166 @@ test("unavailable values need no fabricated qualifier; optional pairs remain val
       e.includes("qualifier_required"),
     ),
   );
+});
+
+test("mapped cards retain exact wording while unmapped choices use a row value", () => {
+  const f = c.filters[0];
+  const p = data.find((p) => p.model === "FuelCell Rebel v5");
+  const view = K.present(p, f);
+  assert.deepEqual(view.groups, ["Road daily", "Road fast"]);
+  assert.equal(view.wording, `New Balance says: ${p.fields.intended_use.value}`);
+  assert.equal(view.groupingLabel, "Editorial grouping");
+  const unmapped = { ...f };
+  delete unmapped.mapping;
+  const plain = K.present(p, unmapped);
+  assert.deepEqual(plain.groups, []);
+  assert.equal(plain.wording, null);
+  assert.equal(plain.value, p.fields.intended_use.value);
+});
+
+test("conflict presentation exposes only the gap, note and source link", () => {
+  const config = fixture("luggage/config");
+  const products = fixture("luggage/data");
+  for (const p of products) {
+    for (const f of K.fields(config)) {
+      const r = p.fields[f.key];
+      if (r.state !== "Conflicting") continue;
+      assert.deepEqual(K.present(p, f), {
+        label: f.label.replace("[brand]", p.brand),
+        value: `${p.brand}'s pages disagree, not shown`,
+        evidence: { note: r.note, source_url: r.source_url },
+      });
+      assert.ok(!/\d/.test(r.note), "Disputed numbers must not leak through notes");
+      assert.ok(!/hidden|excluded pending/i.test(r.note));
+    }
+  }
+  const warnings = validate(config, products, today).warnings;
+  assert.equal(warnings.length, 4);
+  assert.ok(warnings.every((w) => w.includes("shown as a labeled gap")));
+});
+
+test("conflicts stay outside filtering, sorting and comparable counts", () => {
+  const config = fixture("luggage/config");
+  const products = fixture("luggage/data");
+  const weight = config.filters.find((f) => f.key === "weight");
+  const away = products.find((p) => p.id === "away-the-carry-on");
+  assert.equal(K.matches(away, config, { weight: ["100"] }), false);
+  assert.equal(products.filter((p) => K.usable(K.record(p, weight))).length, 13);
+  assert.ok(K.sortProducts(products, config, "weight").slice(-2)
+    .every((p) => p.fields.weight.state === "Conflicting"));
+  const benchmark = {
+    key: "fits",
+    label: "Within benchmark",
+    type: "benchmark",
+    source: "size",
+    limits: [22, 14, 9],
+    checked: today,
+  };
+  assert.equal(K.present(away, benchmark).value, "Cannot determine");
+  assert.equal(K.usable(K.record(away, benchmark)), false);
+});
+
+test("sources retain every permitted evidence detail and price context", () => {
+  const config = fixture("luggage/config");
+  const products = fixture("luggage/data");
+  for (const p of products) {
+    for (const f of K.fields(config)) {
+      const r = p.fields[f.key];
+      if (r.state === "Conflicting") continue;
+      const e = K.present(p, f).evidence;
+      for (const key of ["state", "quote", "source_url", "checked", "note",
+        "qualifier_quote", "qualifier_url", "original"]) {
+        assert.deepEqual(e[key], r[key], `${p.id} / ${f.key} / ${key}`);
+      }
+    }
+  }
+  const p = structuredClone(data[0]);
+  const price = { key: "price", label: "Price", type: "number" };
+  assert.equal(K.present(p, price).dealer, false);
+  p.fields.price.price_kind = "dealer";
+  const dealer = K.present(p, price);
+  assert.equal(dealer.dealer, true);
+  assert.equal(dealer.evidence.priceContext, `Dealer price, checked ${p.fields.price.checked}`);
+});
+
+test("compact cards preserve special-state labels and original measurements", () => {
+  const p = structuredClone(data[0]);
+  const f = c.filters.find((f) => f.key === "weight");
+  for (const state of ["Converted", "Calculated", "Measured differently", "Brand estimate"]) {
+    p.fields.weight.state = state;
+    const view = K.present(p, f);
+    assert.equal(view.stateLabel, state === "Calculated" ? "Calculated from published specs" : state);
+  }
+  p.fields.weight.state = "Converted";
+  p.fields.weight.original = { value: 325, unit: "g" };
+  assert.deepEqual(K.present(p, f).evidence.original, p.fields.weight.original);
+  p.fields.weight.state = "Not published";
+  p.fields.weight.value = null;
+  assert.equal(K.present(p, f).value, `Not published by ${p.brand}`);
+  p.fields.weight.state = "Not yet verified";
+  assert.equal(K.present(p, f).value, "Not yet verified");
+  p.fields.weight.state = "Published";
+  assert.equal(K.present(p, f).stateLabel, undefined);
+  assert.equal(K.present(p, f).evidence.state, "Published");
+});
+
+const { loadApp, descendants } = require("./helpers/app-dom.js");
+
+test("rendered cards have one shared disclosure with all evidence and product date", async () => {
+  const { cards } = await loadApp(c, [data[0]]);
+  const nodes = descendants(cards[0]);
+  assert.equal(nodes.filter((n) => n.tagName === "details").length, 1);
+  assert.equal(nodes.filter((n) => n.tagName === "summary")[0].textContent,
+    `Sources & exact quotes (${K.fields(c).length})`);
+  for (const [key, r] of Object.entries(data[0].fields)) {
+    const evidence = nodes.find((n) => n.dataset.evidenceField === key);
+    assert.ok(evidence.textContent.includes(r.quote));
+    assert.ok(evidence.textContent.includes(r.checked));
+    if (r.note) assert.ok(evidence.textContent.includes(r.note));
+    assert.ok(descendants(evidence).some((n) => n.href === r.source_url));
+  }
+  const sources = nodes.find((n) => n.tagName === "details");
+  assert.ok(sources.textContent.includes(`Product checked ${data[0].checked}`));
+  const header = nodes.find((n) => n.className === "card-header");
+  assert.ok(descendants(header).some((n) => n.dataset.field === "price"));
+  assert.ok(nodes.some((n) => n.textContent === "Brand site ↗"));
+});
+
+test("rendered conflicts contain no quotes or measurements, including qualifiers", async () => {
+  const config = fixture("luggage/config");
+  const p = fixture("luggage/data").find((p) => p.id === "away-the-carry-on");
+  const { cards } = await loadApp(config, [p]);
+  const nodes = descendants(cards[0]);
+  for (const key of ["weight", "size"]) {
+    const row = nodes.find((n) => n.dataset.field === key);
+    assert.ok(row.textContent.includes("Away's pages disagree, not shown"));
+    const evidence = nodes.find((n) => n.dataset.evidenceField === key);
+    assert.equal(evidence.children.length, 3); // Label, source link and note only.
+    assert.equal(descendants(evidence).filter((n) => n.tagName === "blockquote").length, 0);
+    assert.ok(!cards[0].textContent.includes(p.fields[key].quote));
+    if (p.fields[key].qualifier_quote) {
+      assert.ok(!evidence.textContent.includes(p.fields[key].qualifier_quote));
+    }
+  }
+  assert.ok(!nodes.some((n) => n.dataset.field === "price"));
+});
+
+test("rendered dealer price is tagged on the closed card and keeps source context", async () => {
+  const p = structuredClone(data[0]);
+  p.fields.price.price_kind = "dealer";
+  const { cards } = await loadApp(c, [p]);
+  const nodes = descendants(cards[0]);
+  const price = nodes.find((n) => n.dataset.field === "price");
+  assert.ok(descendants(price).some((n) => n.textContent === "Dealer price"));
+  const evidence = nodes.find((n) => n.dataset.evidenceField === "price");
+  assert.ok(evidence.textContent.includes(`Dealer price, checked ${p.fields.price.checked}`));
+});
+
+test("site name controls the header, home label and browser title as plain text", async () => {
+  const name = "My <custom> kit";
+  const { nodes, document } = await loadApp(c, [], name);
+  assert.equal(document.title, name);
+  assert.equal(nodes.get("site-name").textContent, name);
+  assert.equal(nodes.get("site-name").children.length, 0);
+  assert.equal(nodes.get("home-link").attributes["aria-label"], `${name} home`);
 });

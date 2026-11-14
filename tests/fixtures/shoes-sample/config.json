@@ -1,0 +1,127 @@
+{
+  "name": "Men’s running shoes",
+  "question": "Which published specs fit the way you run?",
+  "filters": [
+    {
+      "key": "intended_use",
+      "label": "Intended use",
+      "type": "choice",
+      "hint": "Editorial groupings of the brand’s stated use. Cards retain the original wording.",
+      "edge_case": "Map only verified brand wording to the editorial groups; retain the exact source value and quote.",
+      "values": [
+        "Road daily",
+        "Road fast",
+        "Trail"
+      ],
+      "mapping": {
+        "kind": "editorial",
+        "label": "Editorial grouping",
+        "values": {
+          "Daily Running, Walking": [
+            "Road daily"
+          ],
+          "Tempo Runs, Race": [
+            "Road fast"
+          ],
+          "Trail Running, Hiking": [
+            "Trail"
+          ],
+          "Road Running": [
+            "Road daily"
+          ],
+          "Road Racing": [
+            "Road fast"
+          ],
+          "Everyday Running, Quick Runs": [
+            "Road daily",
+            "Road fast"
+          ],
+          "Trail run/Hiking": [
+            "Trail"
+          ],
+          "Everyday Run": [
+            "Road daily"
+          ],
+          "Road running, Daily runs, Walking, Balanced support": [
+            "Road daily"
+          ],
+          "Trail Running, Race": [
+            "Trail"
+          ]
+        }
+      }
+    },
+    {
+      "key": "drop",
+      "label": "Heel-to-toe drop",
+      "type": "number",
+      "hint": "Narrow the difference between heel and forefoot height.",
+      "edge_case": "Use the manufacturer’s published drop, not a subtraction of uncertain stack measurements.",
+      "unit": "mm",
+      "mode": "max"
+    },
+    {
+      "key": "weight",
+      "label": "Listed weight",
+      "type": "number",
+      "hint": "Compare the manufacturer’s listed men’s shoe weight.",
+      "edge_case": "Keep the reference size in the note; weights at different sizes are not exact comparisons.",
+      "unit": "oz",
+      "mode": "max"
+    }
+  ],
+  "display_fields": [
+    {
+      "key": "stack",
+      "label": "Stack height",
+      "type": "text",
+      "hint": "Heel and forefoot height, where the manufacturer publishes it.",
+      "edge_case": "Keep the exact wording and measurement method. Never infer missing total stack heights."
+    }
+  ],
+  "explainer": {
+    "title": "What does stack mean?",
+    "text": "Stack height is the material between your foot and the ground, listed here as heel / forefoot in millimeters. A 30 mm heel / 22 mm forefoot gives an 8 mm drop—the difference. Higher stack usually means more cushioning, not necessarily softer, more stable, or better for you. Start with Intended use. Brands measure stack differently, including whether they count the insole, so small differences across brands may not be meaningful. Cushion levels in descriptions are each brand's own rating and aren't comparable across brands. Unsure? Treat stack as a description, not a target."
+  },
+  "brands": [
+    {
+      "name": "Topo Athletic",
+      "domains": [
+        "topoathletic.com"
+      ]
+    },
+    {
+      "name": "Nike",
+      "domains": [
+        "nike.com"
+      ]
+    },
+    {
+      "name": "New Balance",
+      "domains": [
+        "newbalance.com"
+      ]
+    },
+    {
+      "name": "Saucony",
+      "domains": [
+        "saucony.com"
+      ]
+    },
+    {
+      "name": "HOKA",
+      "domains": [
+        "hoka.com"
+      ]
+    },
+    {
+      "name": "Brooks",
+      "domains": [
+        "brooksrunning.com"
+      ]
+    }
+  ],
+  "price": true,
+  "notice": "Sample data copied from Stack & Drop on 2026-11-06. Not kept up to date.",
+  "notes": "Manufacturer wording varies. Listed weights use different reference sizes; inspect each note before comparing."
+}
